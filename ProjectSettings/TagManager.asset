@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Selectable
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - dfdf
   - Water
   - UI
   - 

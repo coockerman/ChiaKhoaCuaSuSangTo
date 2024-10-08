@@ -55,6 +55,8 @@ namespace KinematicCharacterController.Examples
         public float AirAccelerationSpeed = 15f;
         public float Drag = 0.1f;
 
+        [Header("Animation")]
+        public Animator animator;
         [Header("Jumping")]
         public bool AllowJumpingWhenSliding = false;
         public float JumpUpSpeed = 10f;
@@ -145,6 +147,7 @@ namespace KinematicCharacterController.Examples
             // Clamp input
             Vector3 moveInputVector = Vector3.ClampMagnitude(new Vector3(inputs.MoveAxisRight, 0f, inputs.MoveAxisForward), 1f);
 
+
             // Calculate camera direction and rotation on the character plane
             Vector3 cameraPlanarDirection = Vector3.ProjectOnPlane(inputs.CameraRotation * Vector3.forward, Motor.CharacterUp).normalized;
             if (cameraPlanarDirection.sqrMagnitude == 0f)
@@ -197,8 +200,41 @@ namespace KinematicCharacterController.Examples
                         break;
                     }
             }
+            UpdateAnimation(inputs);
         }
+        /// <summary>
+        /// Update the character's animations
+        /// </summary>
+        private void UpdateAnimation(PlayerCharacterInputs inputs)
+        {
+            // Kiểm tra nếu nhân vật đang di chuyển
+            if( _moveInputVector.sqrMagnitude > 0f)
+            {
+                animator.SetFloat("Speed", 2f);
+            }
+            else
+            {
+                animator.SetFloat("Speed", 0);
+            }
 
+
+            // Kiểm tra nhảy
+            if (inputs.JumpDown)
+            {
+                
+                animator.SetBool("Jump", true);
+                Invoke("ChamDat", 0.7f);
+                
+            }
+
+            
+        }
+        void ChamDat()
+        {
+            animator.SetBool("Jump", false);
+
+            animator.SetBool("Grounded", true);
+        }
         /// <summary>
         /// This is called every frame by the AI script in order to tell the character what its inputs are
         /// </summary>

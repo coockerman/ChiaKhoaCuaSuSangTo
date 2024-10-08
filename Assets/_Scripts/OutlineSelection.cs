@@ -1,3 +1,4 @@
+using KinematicCharacterController.Examples;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,9 @@ using UnityEngine.EventSystems;
 
 public class OutlineSelection : MonoBehaviour
 {
-    [SerializeField] private float khoangCachHover = 5f;
+    private float khoangCachHover;
+    [SerializeField] float defaultKhoangCach = 5f;
+    [SerializeField] ExampleCharacterCamera characterCamera;
     private Transform highlight;
     private Transform selection;
     private RaycastHit raycastHit;
@@ -23,6 +26,7 @@ public class OutlineSelection : MonoBehaviour
     }
     void Update()
     {
+        khoangCachHover = characterCamera.TargetDistance + defaultKhoangCach;
         // Highlight
         if (highlight != null)
         {
@@ -43,14 +47,7 @@ public class OutlineSelection : MonoBehaviour
                 highlight = raycastHit.transform;
                 if (highlight.CompareTag("Selectable") && highlight != selection)
                 {
-                    if(Input.GetKeyDown(KeyCode.E))
-                    {
-                        ActiveObject rotationActive;
-                        if(highlight.gameObject.TryGetComponent<ActiveObject>(out rotationActive))
-                        {
-                            rotationActive.HandelAction();
-                        }
-                    }
+                    
                     if (highlight.gameObject.GetComponent<Outline>() != null)
                     {
                         highlight.gameObject.GetComponent<Outline>().enabled = true;
@@ -59,8 +56,8 @@ public class OutlineSelection : MonoBehaviour
                     {
                         Outline outline = highlight.gameObject.AddComponent<Outline>();
                         outline.enabled = true;
-                        highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.magenta;
-                        highlight.gameObject.GetComponent<Outline>().OutlineWidth = 7.0f;
+                        //highlight.gameObject.GetComponent<Outline>().OutlineColor = Color.magenta;
+                        //highlight.gameObject.GetComponent<Outline>().OutlineWidth = 7.0f;
                     }
                 }
                 else
@@ -75,21 +72,27 @@ public class OutlineSelection : MonoBehaviour
         {
             if (highlight)
             {
-                if (selection != null)
+                ActiveObject rotationActive;
+                if (highlight.gameObject.TryGetComponent<ActiveObject>(out rotationActive))
                 {
-                    selection.gameObject.GetComponent<Outline>().enabled = false;
+                    rotationActive.HandelAction();
                 }
-                selection = raycastHit.transform;
-                selection.gameObject.GetComponent<Outline>().enabled = true;
-                highlight = null;
+                
+                //if (selection != null)
+                //{
+                //    selection.gameObject.GetComponent<Outline>().enabled = false;
+                //}
+                //selection = raycastHit.transform;
+                //selection.gameObject.GetComponent<Outline>().enabled = true;
+                //highlight = null;
             }
             else
             {
-                if (selection)
-                {
-                    selection.gameObject.GetComponent<Outline>().enabled = false;
-                    selection = null;
-                }
+                //if (selection)
+                //{
+                //    selection.gameObject.GetComponent<Outline>().enabled = false;
+                //    selection = null;
+                //}
             }
         }
     }

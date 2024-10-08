@@ -7,15 +7,15 @@ public class ActiveObject : MonoBehaviour
 {
     public enum loaiDoXoay
     {
-        cuaRaVao, cuaTu, nganKeoDai, nganKeoNgan, cuaSo
+        cuaRaVao, cuaTu, nganKeoDai, nganKeoNgan, cuaSo, cauThang
     }
     [SerializeField] bool isMoveOrRotateIn = true;
     [SerializeField] bool isLoop = false;
     [SerializeField] bool isActive = false;
     [SerializeField] loaiDoXoay loaiDo;
     float gocXoay = 90;
-    float doDaiNganKeo = 1f;
-    float doDaiCuaSo = 0.5f;
+    float doDaiKeo = 1f;
+    bool huongCuaSoX = false;
     private void Start()
     {
         gameObject.tag = "Selectable";
@@ -25,9 +25,10 @@ public class ActiveObject : MonoBehaviour
         }
         if (loaiDo == loaiDoXoay.cuaRaVao) gocXoay = 90;
         else if (loaiDo == loaiDoXoay.cuaTu) gocXoay = 135;
-        else if (loaiDo == loaiDoXoay.nganKeoNgan) doDaiNganKeo = 0.3f;
-        else if (loaiDo == loaiDoXoay.nganKeoDai) doDaiNganKeo = 0.5f;
-
+        else if (loaiDo == loaiDoXoay.nganKeoNgan) doDaiKeo = 0.3f;
+        else if (loaiDo == loaiDoXoay.nganKeoDai) doDaiKeo = 0.5f;
+        else if (loaiDo == loaiDoXoay.cauThang) gocXoay = 60;
+        else if (loaiDo == loaiDoXoay.cuaSo) { XuLyHuongCuaSo(); doDaiKeo = 0.7f; }
     }
     public void HandelAction()
     {
@@ -35,27 +36,47 @@ public class ActiveObject : MonoBehaviour
         {
             if (!isLoop)
             {
-                if (!isActive) RotateOn();
+                if (!isActive) RotateY();
             }
             else
             {
-                RotateOn();
+                RotateY();
             }
         }
-        else
+        else if(loaiDo == loaiDoXoay.nganKeoDai || loaiDo == loaiDoXoay.nganKeoNgan)
         {
             if (!isLoop)
             {
-                if (!isActive) MoveOn();
+                if (!isActive) MoveX();
             }
             else
             {
-                MoveOn();
+                MoveX();
             }
         }
-
+        else if(loaiDo == loaiDoXoay.cauThang)
+        {
+            if (!isLoop)
+            {
+                if (!isActive) RotateX();
+            }
+            else
+            {
+                RotateX();
+            }
+        }else if(loaiDo == loaiDoXoay.cuaSo)
+        {
+            if (!isLoop)
+            {
+                if (!isActive) DiChuyenCuaSo();
+            }
+            else
+            {
+                DiChuyenCuaSo();
+            }
+        }
     }
-    void RotateOn()
+    void RotateY()
     {
         isActive = true;
 
@@ -70,18 +91,63 @@ public class ActiveObject : MonoBehaviour
             isMoveOrRotateIn = true;
         }
     }
-    void MoveOn()
+    void RotateX()
     {
         isActive = true;
-        if(isMoveOrRotateIn)
+
+        if (isMoveOrRotateIn)
         {
-            transform.Translate(new Vector3(doDaiNganKeo, 0, 0));
+            transform.Rotate(new Vector3(gocXoay, 0, 0));
             isMoveOrRotateIn = false;
         }
         else
         {
-            transform.Translate(new Vector3(-doDaiNganKeo, 0, 0));
+            transform.Rotate(new Vector3(-gocXoay, 0, 0));
             isMoveOrRotateIn = true;
         }
+    }
+    void MoveX()
+    {
+        isActive = true;
+        if(isMoveOrRotateIn)
+        {
+            transform.Translate(new Vector3(doDaiKeo, 0, 0));
+            isMoveOrRotateIn = false;
+        }
+        else
+        {
+            transform.Translate(new Vector3(-doDaiKeo, 0, 0));
+            isMoveOrRotateIn = true;
+        }
+    }
+    void MoveZ()
+    {
+        isActive = true;
+        if (isMoveOrRotateIn)
+        {
+            transform.Translate(new Vector3(doDaiKeo, 0, 0));
+            isMoveOrRotateIn = false;
+        }
+        else
+        {
+            transform.Translate(new Vector3(-doDaiKeo, 0, 0));
+            isMoveOrRotateIn = true;
+        }
+    }
+    void XuLyHuongCuaSo()
+    {
+        if(Mathf.Abs(transform.position.x) - 0.7 > Mathf.Abs(transform.position.z) - 0.7)
+        {
+            huongCuaSoX = false;
+        }
+        else
+        {
+            huongCuaSoX = true;
+        }
+    }
+    void DiChuyenCuaSo()
+    {
+        if(huongCuaSoX) MoveX();
+        else MoveZ();
     }
 }
