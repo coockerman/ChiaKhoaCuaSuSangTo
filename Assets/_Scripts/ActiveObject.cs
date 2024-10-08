@@ -12,6 +12,7 @@ public class ActiveObject : MonoBehaviour
     [SerializeField] bool isMoveOrRotateIn = true;
     [SerializeField] bool isLoop = false;
     [SerializeField] bool isActive = false;
+    public bool IsActive { get { return isActive; } }
     [SerializeField] loaiDoXoay loaiDo;
     float gocXoay = 90;
     float doDaiKeo = 1f;
@@ -29,6 +30,10 @@ public class ActiveObject : MonoBehaviour
         else if (loaiDo == loaiDoXoay.nganKeoDai) doDaiKeo = 0.5f;
         else if (loaiDo == loaiDoXoay.cauThang) gocXoay = 60;
         else if (loaiDo == loaiDoXoay.cuaSo) { XuLyHuongCuaSo(); doDaiKeo = 0.7f; }
+    }
+    private void Update()
+    {
+        
     }
     public void HandelAction()
     {
