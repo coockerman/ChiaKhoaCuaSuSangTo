@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9432feaea1a277046b1887363891b4ea, type: 3}
+  m_Name: 9_ChauHoa 3
+  m_EditorClassIdentifier: 
+  noiDungHoiThoai: "V\u1EADy gi\u1EDD s\u1EBD \u0111\u01B0a th\xF4ng tin n\xE0y v\u1EC1
+    c\u1EA3nh s\xE1t v\xE0 t\xECm c\xE1ch li\xEAn l\u1EA1c v\u1EDBi Emily th\xF4i"

@@ -26,7 +26,7 @@ public class Item : MonoBehaviour
             countDelayAddHoiThoai += Time.deltaTime;
         if (isStartCheckChuyenMan)
         {
-            if (Player.Instance.CheckHaveHoiThoai())
+            if (!Player.Instance.CheckHaveHoiThoai())
             {
                 GamePlayManager.Instance.ChuyenMan();
             }
@@ -38,7 +38,6 @@ public class Item : MonoBehaviour
         {
             AddHoiThoaiItem();
             XuLyChuyenMan();
-            Destroy(gameObject);
         }
         else
         {
@@ -46,7 +45,6 @@ public class Item : MonoBehaviour
             {
                 AddHoiThoaiItem();
                 Player.Instance.AddItem();
-                Destroy(gameObject);
             }
 
             else if (loaiItem == LoaiItem.huongDan)

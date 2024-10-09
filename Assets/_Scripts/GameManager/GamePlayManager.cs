@@ -17,7 +17,7 @@ public class GamePlayManager : MonoBehaviour
         int totalScenes = SceneManager.sceneCountInBuildSettings;
 
         // Kiểm tra nếu scene hiện tại là scene cuối cùng
-        if (sceneNow < totalScenes - 1)
+        if (sceneNow <= totalScenes - 1)
         {
             SceneManager.LoadScene(sceneNow + 1);
         }

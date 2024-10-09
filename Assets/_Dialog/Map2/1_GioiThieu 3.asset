@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9432feaea1a277046b1887363891b4ea, type: 3}
+  m_Name: 1_GioiThieu 3
+  m_EditorClassIdentifier: 
+  noiDungHoiThoai: "Alex tin r\u1EB1ng c\xF3 th\u1EC3 t\xECm ra manh m\u1ED1i \u1EDF
+    \u0111\xE2y"
