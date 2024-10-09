@@ -6,6 +6,7 @@ public class CheckAddHoiThoai : MonoBehaviour
 {
     ActiveObject activeObject;
     [SerializeField] List<DialogData> dialogData = new List<DialogData>();
+    [SerializeField] float timeDelayAdd = 0.5f;
     bool isAdd = false;
     private void Start()
     {
@@ -22,12 +23,17 @@ public class CheckAddHoiThoai : MonoBehaviour
         {
             if (activeObject.IsActive)
             {
-                foreach (DialogData dialog in dialogData)
-                {
-                    Player.Instance.AddHoiThoai(dialog);
-                }
                 isAdd = true;
+                StartCoroutine(delayAddHoiThoai());
             }
+        }
+    }
+    IEnumerator delayAddHoiThoai()
+    {
+        yield return new WaitForSeconds(timeDelayAdd);
+        foreach (DialogData dialog in dialogData)
+        {
+            Player.Instance.AddHoiThoai(dialog);
         }
     }
 }

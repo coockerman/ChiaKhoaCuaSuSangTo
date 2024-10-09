@@ -86,7 +86,6 @@ public class OutlineSelection : MonoBehaviour
                 if (highlight.gameObject.TryGetComponent<Item>(out itemGet))
                 {
                     itemGet.HanderAction();
-                    Destroy(itemGet.gameObject);
                 }
             }
         }

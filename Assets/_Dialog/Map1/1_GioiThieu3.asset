@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9432feaea1a277046b1887363891b4ea, type: 3}
+  m_Name: 1_GioiThieu3
+  m_EditorClassIdentifier: 
+  noiDungHoiThoai: "Sau nhi\u1EC1u n\u1ED7 l\u1EF1c c\u1EE7a c\xE1c \u0111\u1EB7c
+    v\u1EE5 CIA, anh \u1EA5y \u0111\xE3 bi\u1EBFt \u0111\u01B0\u1EE3c c\u0103n nh\xE0
+    gi\u1EA5u ch\xECa kho\xE1"

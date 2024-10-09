@@ -10,8 +10,10 @@ public class UIPlayer : MonoBehaviour
     public GameObject BoxDialogText { get { return boxDialogText; } }
     [SerializeField] TextMeshProUGUI dialogText;
     public TextMeshProUGUI DialogText { get { return dialogText; } }
+    public GameObject huongDan;
     private void Awake()
     {
         instance = this;
     }
+    
 }

@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public static Player Instance;
     List<DialogData> dialogDatas = new List<DialogData>();
+    [SerializeField] List<DialogData> dialogStart = new List<DialogData>();
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] float letterDelay = 0.1f;
     bool isRunDialog = false;
@@ -14,6 +15,34 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+    private void Start()
+    {
+        if(UIPlayer.instance.huongDan.activeSelf == true)
+        {
+            StartCoroutine(addFirstDialog(5));
+        }
+        else
+        {
+            StartCoroutine(addFirstDialog(0.5f));
+        }
+    }
+    IEnumerator addFirstDialog(float timeWait)
+    {
+        yield return new WaitForSeconds(timeWait);
+        UIPlayer.instance.huongDan.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        AddDialogFirst();
+    }
+    void AddDialogFirst()
+    {
+        if (dialogStart.Count > 0)
+        {
+            foreach (DialogData data in dialogStart)
+            {
+                AddHoiThoai(data);
+            }
+        }
     }
     void Update()
     {
@@ -39,17 +68,18 @@ public class Player : MonoBehaviour
         isRunDialog = true;
         UIPlayer.instance.BoxDialogText.SetActive(true);
         UIPlayer.instance.DialogText.text = "";  // Xóa nội dung cũ
-
+        float timeWait = 1f;
         // Tách đoạn hội thoại thành từng từ
         string[] words = dialogue.Split(' ');
 
         foreach (string word in words)
         {
+            timeWait += 0.1f;
             UIPlayer.instance.DialogText.text += word + " ";  // Thêm từng từ vào UI Text
             yield return new WaitForSeconds(letterDelay);  // Chờ một khoảng thời gian giữa các từ
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(timeWait);
         dialogDatas.RemoveAt(0);  // Xoá đoạn hội thoại đầu tiên
         UIPlayer.instance.BoxDialogText.SetActive(false);  // Ẩn Text sau khi hội thoại kết thúc
         isRunDialog = false;
