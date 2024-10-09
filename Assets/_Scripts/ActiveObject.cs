@@ -7,22 +7,32 @@ public class ActiveObject : MonoBehaviour
 {
     public enum loaiDoXoay
     {
-        cuaRaVao, cuaTu, nganKeoDai, nganKeoNgan, cuaSo, cauThang
+        cuaRaVao, cuaTu, nganKeoDai, nganKeoNgan, cuaSo, cauThang, nutXoay
     }
     [SerializeField] bool isMoveOrRotateIn = true;
     [SerializeField] bool isLoop = false;
     [SerializeField] bool isActive = false;
     public bool IsActive { get { return isActive; } }
     [SerializeField] loaiDoXoay loaiDo;
+
+    [SerializeField] DialogData dialogThongBaoLoi;
+    [SerializeField] float timeDelayThongBaoLoi = 3f;
+    [SerializeField] bool canActive = true;
+    float coutDelayThongBaoLoi = 0;
+
+
     float gocXoay = 90;
     float doDaiKeo = 1f;
     bool huongCuaSoX = false;
+
+
     private void Start()
     {
         gameObject.tag = "Selectable";
+        coutDelayThongBaoLoi = timeDelayThongBaoLoi;
         if (isActive)
         {
-            HandelAction();
+            HanderAction();
         }
         if (loaiDo == loaiDoXoay.cuaRaVao) gocXoay = 90;
         else if (loaiDo == loaiDoXoay.cuaTu) gocXoay = 135;
@@ -30,13 +40,20 @@ public class ActiveObject : MonoBehaviour
         else if (loaiDo == loaiDoXoay.nganKeoDai) doDaiKeo = 0.5f;
         else if (loaiDo == loaiDoXoay.cauThang) gocXoay = 60;
         else if (loaiDo == loaiDoXoay.cuaSo) { XuLyHuongCuaSo(); doDaiKeo = 0.7f; }
+        else if (loaiDo == loaiDoXoay.nutXoay) { gocXoay = 45; }
     }
     private void Update()
     {
-        
+        if (dialogThongBaoLoi == null) return;
+        coutDelayThongBaoLoi -= Time.deltaTime;
     }
-    public void HandelAction()
+    public void HanderAction()
     {
+        if(!canActive)
+        {
+            ThongBaoLoi();
+            return;
+        }
         if (loaiDo == loaiDoXoay.cuaRaVao || loaiDo == loaiDoXoay.cuaTu)
         {
             if (!isLoop)
@@ -79,6 +96,9 @@ public class ActiveObject : MonoBehaviour
             {
                 DiChuyenCuaSo();
             }
+        }else if(loaiDo == loaiDoXoay.nutXoay)
+        {
+            RotateNutXoayY();
         }
     }
     void RotateY()
@@ -110,6 +130,10 @@ public class ActiveObject : MonoBehaviour
             transform.Rotate(new Vector3(-gocXoay, 0, 0));
             isMoveOrRotateIn = true;
         }
+    }
+    void RotateNutXoayY()
+    {
+        transform.Rotate(new Vector3(0, gocXoay, 0));
     }
     void MoveX()
     {
@@ -154,5 +178,18 @@ public class ActiveObject : MonoBehaviour
     {
         if(huongCuaSoX) MoveX();
         else MoveZ();
+    }
+    void ThongBaoLoi()
+    {
+        if(coutDelayThongBaoLoi < 0)
+        {
+            coutDelayThongBaoLoi = timeDelayThongBaoLoi;
+            if (dialogThongBaoLoi != null)
+                Player.Instance.AddHoiThoai(dialogThongBaoLoi);
+        }
+    }
+    public void SetCanActive(bool isActive)
+    {
+        canActive = isActive;
     }
 }

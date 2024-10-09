@@ -45,7 +45,7 @@ public class OutlineSelection : MonoBehaviour
             if (distance <= khoangCachHover)
             {
                 highlight = raycastHit.transform;
-                if (highlight.CompareTag("Selectable") && highlight != selection)
+                if ((highlight.CompareTag("Selectable") || highlight.CompareTag("Item")) && highlight != selection)
                 {
                     
                     if (highlight.gameObject.GetComponent<Outline>() != null)
@@ -70,29 +70,24 @@ public class OutlineSelection : MonoBehaviour
         // Selection
         if (Input.GetMouseButtonDown(0))
         {
-            if (highlight)
+            if (highlight.CompareTag("Selectable"))
             {
                 ActiveObject rotationActive;
                 if (highlight.gameObject.TryGetComponent<ActiveObject>(out rotationActive))
                 {
-                    rotationActive.HandelAction();
+                    rotationActive.HanderAction();
                 }
                 
-                //if (selection != null)
-                //{
-                //    selection.gameObject.GetComponent<Outline>().enabled = false;
-                //}
-                //selection = raycastHit.transform;
-                //selection.gameObject.GetComponent<Outline>().enabled = true;
-                //highlight = null;
+                
             }
-            else
+            else if(highlight.CompareTag("Item"))
             {
-                //if (selection)
-                //{
-                //    selection.gameObject.GetComponent<Outline>().enabled = false;
-                //    selection = null;
-                //}
+                Item itemGet;
+                if (highlight.gameObject.TryGetComponent<Item>(out itemGet))
+                {
+                    itemGet.HanderAction();
+                    Destroy(itemGet.gameObject);
+                }
             }
         }
     }

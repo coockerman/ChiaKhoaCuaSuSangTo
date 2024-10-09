@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] float letterDelay = 0.1f;
     bool isRunDialog = false;
-
+    bool isCanAddHoiThoai = true;
     private void Awake()
     {
         Instance = this;
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
 
     public void AddHoiThoai(DialogData newDialog)
     {
+        if(isCanAddHoiThoai)
         dialogDatas.Add(newDialog);
     }
 
@@ -36,18 +37,32 @@ public class Player : MonoBehaviour
     IEnumerator DisplayLetters(string dialogue)
     {
         isRunDialog = true;
-        dialogueText.gameObject.SetActive(true);
-        dialogueText.text = "";  // Xóa nội dung cũ
+        UIPlayer.instance.BoxDialogText.SetActive(true);
+        UIPlayer.instance.DialogText.text = "";  // Xóa nội dung cũ
 
-        foreach (char letter in dialogue.ToCharArray())
+        // Tách đoạn hội thoại thành từng từ
+        string[] words = dialogue.Split(' ');
+
+        foreach (string word in words)
         {
-            dialogueText.text += letter;  // Thêm từng chữ cái vào UI Text
-            yield return new WaitForSeconds(letterDelay);  // Chờ một khoảng thời gian giữa các chữ cái
+            UIPlayer.instance.DialogText.text += word + " ";  // Thêm từng từ vào UI Text
+            yield return new WaitForSeconds(letterDelay);  // Chờ một khoảng thời gian giữa các từ
         }
 
         yield return new WaitForSeconds(3f);
         dialogDatas.RemoveAt(0);  // Xoá đoạn hội thoại đầu tiên
-        dialogueText.gameObject.SetActive(false);  // Ẩn Text sau khi hội thoại kết thúc
+        UIPlayer.instance.BoxDialogText.SetActive(false);  // Ẩn Text sau khi hội thoại kết thúc
         isRunDialog = false;
+    }
+
+    public bool CheckHaveHoiThoai()
+    {
+        isCanAddHoiThoai = false;
+        if (!isRunDialog && dialogDatas.Count <= 0) return false;
+        else return true;
+    }
+    public void AddItem()
+    {
+
     }
 }
