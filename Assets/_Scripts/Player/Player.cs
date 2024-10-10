@@ -6,12 +6,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player Instance;
+    List<ItemData> listItem = new List<ItemData>();
     List<DialogData> dialogDatas = new List<DialogData>();
     [SerializeField] List<DialogData> dialogStart = new List<DialogData>();
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] float letterDelay = 0.1f;
     bool isRunDialog = false;
-    bool isCanAddHoiThoai = true;
+    bool isStartCheckChuyenMan = false;
     private void Awake()
     {
         Instance = this;
@@ -47,11 +48,18 @@ public class Player : MonoBehaviour
     void Update()
     {
         CheckHoiThoai();
+        if (isStartCheckChuyenMan)
+        {
+            if (CheckHaveHoiThoai())
+            {
+                GamePlayManager.Instance.ChuyenMan();
+            }
+        }
     }
 
     public void AddHoiThoai(DialogData newDialog)
     {
-        if(isCanAddHoiThoai)
+        if(!isStartCheckChuyenMan)
         dialogDatas.Add(newDialog);
     }
 
@@ -87,12 +95,40 @@ public class Player : MonoBehaviour
 
     public bool CheckHaveHoiThoai()
     {
-        isCanAddHoiThoai = false;
-        if (!isRunDialog && dialogDatas.Count <= 0) return false;
-        else return true;
+        if (!isRunDialog && dialogDatas.Count <= 0) return true;
+        else return false;
     }
-    public void AddItem()
+    public void XuLyChuyenMan()
     {
-
+        isStartCheckChuyenMan = true;
+    }
+    public void AddItem(ItemData itemData)
+    {
+        if(itemData!=null)
+        {
+            listItem.Add(itemData);
+        }
+    }
+    public bool CheckItemOnBag(List<ItemData> listItemData)
+    {
+        foreach(ItemData item in listItemData)
+        {
+            if(!listItem.Contains(item))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public void GetItemOnBag(List<ItemData> listItemData)
+    {
+        foreach (ItemData item in listItemData)
+        {
+            ItemData itemFind = listItem.Find(i => i == item);
+            if (itemFind != null)
+            {
+                listItem.Remove(itemFind);
+            }
+        }
     }
 }

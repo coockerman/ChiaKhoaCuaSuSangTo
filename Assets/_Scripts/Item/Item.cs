@@ -10,11 +10,12 @@ public class Item : MonoBehaviour
         doVat, huongDan
     }
     [SerializeField] bool keyManChoi = false;
+    [SerializeField] ItemData itemData;
     [SerializeField] List<DialogData> datas = new List<DialogData>();
     [SerializeField] LoaiItem loaiItem;
     [SerializeField] float timeDelayAddHoiThoai = 2f;
     float countDelayAddHoiThoai = 0;
-    bool isStartCheckChuyenMan = false;
+    //bool isStartCheckChuyenMan = false;
 
     private void Start()
     {
@@ -24,27 +25,21 @@ public class Item : MonoBehaviour
     {
         if (datas.Count > 0)
             countDelayAddHoiThoai += Time.deltaTime;
-        if (isStartCheckChuyenMan)
-        {
-            if (!Player.Instance.CheckHaveHoiThoai())
-            {
-                GamePlayManager.Instance.ChuyenMan();
-            }
-        }
     }
     public void HanderAction()
     {
         if (keyManChoi)
         {
             AddHoiThoaiItem();
-            XuLyChuyenMan();
+            Player.Instance.XuLyChuyenMan();
         }
         else
         {
             if (loaiItem == LoaiItem.doVat)
             {
                 AddHoiThoaiItem();
-                Player.Instance.AddItem();
+                Player.Instance.AddItem(itemData);
+                Destroy(gameObject);
             }
 
             else if (loaiItem == LoaiItem.huongDan)
@@ -54,10 +49,7 @@ public class Item : MonoBehaviour
 
         }
     }
-    public void XuLyChuyenMan()
-    {
-        isStartCheckChuyenMan = true;
-    }
+    
     void AddHoiThoaiItem()
     {
         if (countDelayAddHoiThoai > timeDelayAddHoiThoai)

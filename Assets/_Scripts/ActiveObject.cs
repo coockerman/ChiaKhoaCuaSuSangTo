@@ -25,6 +25,7 @@ public class ActiveObject : MonoBehaviour
     float doDaiKeo = 1f;
     bool huongCuaSoX = false;
 
+    [SerializeField] List<ItemData> listItemNeed = new List<ItemData>();
 
     private void Start()
     {
@@ -51,8 +52,25 @@ public class ActiveObject : MonoBehaviour
     {
         if(!canActive)
         {
-            ThongBaoLoi();
-            return;
+            if(listItemNeed.Count>0)
+            {
+                bool isListNeed = Player.Instance.CheckItemOnBag(listItemNeed);
+                if(!isListNeed)
+                {
+                    ThongBaoLoi();
+                    return;
+                }
+                else
+                {
+                    SetCanActive(true);
+                    Player.Instance.GetItemOnBag(listItemNeed);
+                }
+            }
+            else
+            {
+                ThongBaoLoi();
+                return;
+            }
         }
         if (loaiDo == loaiDoXoay.cuaRaVao || loaiDo == loaiDoXoay.cuaTu)
         {

@@ -6284,6 +6284,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!64 &150815665
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10247,6 +10248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyManChoi: 0
+  itemData: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: 401408ef471c4154aa1be68ab0ad30f6, type: 2}
   loaiItem: 1
@@ -10674,10 +10676,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -10694,7 +10696,7 @@ Canvas:
   m_GameObject: {fileID: 254047480}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -14419,6 +14421,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!114 &373491435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14787,6 +14790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyManChoi: 1
+  itemData: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: bc41bab907fb84440babd6d68000d647, type: 2}
   - {fileID: 11400000, guid: cc2d15b6d8ad0b644ba9dadf6cc355c0, type: 2}
@@ -23004,6 +23008,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!64 &579758102
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23615,6 +23620,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!1001 &608073860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26053,6 +26059,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!64 &654442748
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29523,7 +29530,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 598360305d4841e419b25e11dd02a850, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -29587,7 +29594,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &702075169
@@ -31968,6 +31975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyManChoi: 0
+  itemData: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: 16ff675a819e5d74cb109a6f4dc499fb, type: 2}
   loaiItem: 1
@@ -39906,6 +39914,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!64 &899480871
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -42559,6 +42568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyManChoi: 0
+  itemData: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: c87b0a96e9fadd64687396b82d6811e4, type: 2}
   loaiItem: 1
@@ -44795,6 +44805,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!1001 &1016213238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46894,6 +46905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyManChoi: 0
+  itemData: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: 45c2f0233bc2b9c429e748458967c9ee, type: 2}
   - {fileID: 11400000, guid: ce84122e97bbf92469c00510bf76287c, type: 2}
@@ -50645,6 +50657,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!64 &1208700389
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60504,6 +60517,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!64 &1461591160
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -63508,6 +63522,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!64 &1543861970
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -69804,6 +69819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyManChoi: 0
+  itemData: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: 433337cbe1528a647824e3bc781c7eb5, type: 2}
   loaiItem: 1
@@ -73623,6 +73639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyManChoi: 0
+  itemData: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: 39c4bb9233045ce4eac6f4c651edc674, type: 2}
   loaiItem: 1
@@ -74135,13 +74152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca8b33dd087e6e4b97f89beb3d4beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMoveOrRotateIn: 1
+  isMoveOrRotateIn: 0
   isLoop: 1
   isActive: 0
   loaiDo: 0
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!65 &1791562177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75240,6 +75258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyManChoi: 0
+  itemData: {fileID: 0}
   datas:
   - {fileID: 11400000, guid: 51e6b767ea1a15b45b522c830a662a2a, type: 2}
   - {fileID: 11400000, guid: 4c6f88333f31a6b42a7a55680da2469a, type: 2}
@@ -79125,6 +79144,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!114 &1951484397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79957,6 +79977,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!64 &1990013684
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -83800,6 +83821,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!65 &2094960621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83840,6 +83862,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!114 &2094960623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84913,6 +84936,7 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
 --- !u!64 &2142893940
 MeshCollider:
   m_ObjectHideFlags: 0
