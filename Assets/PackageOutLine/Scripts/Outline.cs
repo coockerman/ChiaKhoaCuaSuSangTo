@@ -192,7 +192,7 @@ public class Outline : MonoBehaviour {
             // Check if the mesh is readable before attempting to modify UVs
             if (!meshFilter.sharedMesh.isReadable)
             {
-                Debug.LogWarning($"Mesh '{meshFilter.sharedMesh.name}' is not readable. Skipping UV modifications.");
+                //Debug.LogWarning($"Mesh '{meshFilter.sharedMesh.name}' is not readable. Skipping UV modifications.");
                 continue;
             }
 

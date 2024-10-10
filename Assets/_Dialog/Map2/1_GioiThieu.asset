@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9432feaea1a277046b1887363891b4ea, type: 3}
   m_Name: 1_GioiThieu
   m_EditorClassIdentifier: 
-  noiDungHoiThoai: "L\u1EA7n n\xE0y Alex \u0111\u01B0\u1EE3c m\u1EDDi \u0111\u1EBFn
-    \u0111i\u1EC1u tra s\u1EF1 m\u1EA5t t\xEDch c\u1EE7a Emily"
+  noiDungHoiThoai: "L\u1EA7n n\xE0y Alex \u0111\u1EBFn \u0111i\u1EC1u tra s\u1EF1
+    m\u1EA5t t\xEDch c\u1EE7a Emily"

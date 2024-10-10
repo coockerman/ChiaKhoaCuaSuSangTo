@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6431602690795118793}
   - component: {fileID: 2178309115149545231}
   - component: {fileID: 7015753722451646715}
-  - component: {fileID: 1576593992446461275}
+  - component: {fileID: 6330321801902924957}
   m_Layer: 0
   m_Name: Interior_Door
   m_TagString: Selectable
@@ -47,8 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca8b33dd087e6e4b97f89beb3d4beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRotateIn: 1
+  isMoveOrRotateIn: 1
   isLoop: 1
+  isActive: 0
+  loaiDo: 0
+  dialogThongBaoLoi: {fileID: 0}
+  timeDelayThongBaoLoi: 3
+  canActive: 1
 --- !u!33 &2178309115149545231
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -99,8 +104,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1576593992446461275
-BoxCollider:
+--- !u!64 &6330321801902924957
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,6 +122,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.8959997, y: 2.0370002, z: 0.066000335}
-  m_Center: {x: 0.4459999, y: 1.0195, z: 0.031999942}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8472003848236001347, guid: e0147f4678533444ca8209554a9ead22, type: 3}

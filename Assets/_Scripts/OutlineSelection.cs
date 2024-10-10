@@ -70,6 +70,7 @@ public class OutlineSelection : MonoBehaviour
         // Selection
         if (Input.GetMouseButtonDown(0))
         {
+            if (highlight == null) return;
             if (highlight.CompareTag("Selectable"))
             {
                 ActiveObject rotationActive;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1026279321958574296}
   - component: {fileID: 1351246708894619633}
   - component: {fileID: 1602225602444856288}
-  - component: {fileID: 3840443668534243755}
+  - component: {fileID: 4080765452017139284}
   m_Layer: 0
   m_Name: Exterior_WindowB
   m_TagString: Untagged
@@ -51,6 +51,9 @@ MonoBehaviour:
   isLoop: 1
   isActive: 0
   loaiDo: 4
+  dialogThongBaoLoi: {fileID: 0}
+  timeDelayThongBaoLoi: 3
+  canActive: 1
 --- !u!33 &1351246708894619633
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -101,8 +104,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3840443668534243755
-BoxCollider:
+--- !u!64 &4080765452017139284
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -119,6 +122,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.718, y: 0.99000007, z: 0.09000014}
-  m_Center: {x: 0.35899988, y: -0.5450002, z: 0.04400374}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6095169206465931966, guid: e0147f4678533444ca8209554a9ead22, type: 3}
