@@ -55,9 +55,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca8b33dd087e6e4b97f89beb3d4beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRotateIn: 1
-  isActive: 0
+  isMoveOrRotateIn: 1
   isLoop: 1
+  isActive: 0
+  loaiDo: 0
+  dialogThongBaoLoi: {fileID: 0}
+  timeDelayThongBaoLoi: 3
+  canActive: 1
+  listItemNeed: []
+  soundAction: {fileID: 8300000, guid: 392162322bf822a428d542d5c0dfd43f, type: 3}
 --- !u!23 &2602109674803280257
 MeshRenderer:
   m_ObjectHideFlags: 0

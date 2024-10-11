@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class FootstepHandler : MonoBehaviour
 {
+    public AudioClip step;
+
     public void OnFootstep()
     {
-        Debug.Log("Footstep triggered!");
-        // Chèn logic phát âm thanh hoặc các hành động khác
+        AudioController.instance.SoundPlayer.PlayOneShot(step);
     }
     public void OnLand()
     {

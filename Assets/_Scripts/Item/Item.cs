@@ -31,6 +31,7 @@ public class Item : MonoBehaviour
         if (keyManChoi)
         {
             AddHoiThoaiItem();
+            AudioController.instance.OnAudioDoVat();
             Player.Instance.XuLyChuyenMan();
         }
         else
@@ -38,12 +39,14 @@ public class Item : MonoBehaviour
             if (loaiItem == LoaiItem.doVat)
             {
                 AddHoiThoaiItem();
+                AudioController.instance.OnAudioDoVat();
                 Player.Instance.AddItem(itemData);
                 Destroy(gameObject);
             }
 
             else if (loaiItem == LoaiItem.huongDan)
             {
+                AudioController.instance.OnAudioHuongDan();
                 AddHoiThoaiItem();
             }
 

@@ -27,6 +27,7 @@ public class ActiveObject : MonoBehaviour
 
     [SerializeField] List<ItemData> listItemNeed = new List<ItemData>();
 
+    public AudioClip soundAction;
     private void Start()
     {
         gameObject.tag = "Selectable";
@@ -72,6 +73,12 @@ public class ActiveObject : MonoBehaviour
                 return;
             }
         }
+
+        if(soundAction!=null)
+        {
+            AudioController.instance.SoundDoVat.PlayOneShot(soundAction);
+        }
+
         if (loaiDo == loaiDoXoay.cuaRaVao || loaiDo == loaiDoXoay.cuaTu)
         {
             if (!isLoop)

@@ -54,6 +54,8 @@ MonoBehaviour:
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
+  listItemNeed: []
+  soundAction: {fileID: 8300000, guid: 392162322bf822a428d542d5c0dfd43f, type: 3}
 --- !u!33 &2178309115149545231
 MeshFilter:
   m_ObjectHideFlags: 0
