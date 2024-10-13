@@ -1,3 +1,4 @@
+using KinematicCharacterController.Examples;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,13 +8,14 @@ public class Item : MonoBehaviour
 {
     public enum LoaiItem
     {
-        doVat, huongDan
+        doVat, huongDan, moKhoa
     }
     [SerializeField] bool keyManChoi = false;
     [SerializeField] ItemData itemData;
     [SerializeField] List<DialogData> datas = new List<DialogData>();
     [SerializeField] LoaiItem loaiItem;
     [SerializeField] float timeDelayAddHoiThoai = 2f;
+    [SerializeField] GameObject objectNhapKhoa;
     float countDelayAddHoiThoai = 0;
     //bool isStartCheckChuyenMan = false;
 
@@ -49,7 +51,17 @@ public class Item : MonoBehaviour
                 AudioController.instance.OnAudioHuongDan();
                 AddHoiThoaiItem();
             }
+            else if (loaiItem == LoaiItem.moKhoa)
+            {
+                AudioController.instance.OnAudioHuongDan();
 
+                if (objectNhapKhoa != null)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    ExamplePlayer.Instance.IsSelectMouse = false;
+                    objectNhapKhoa.SetActive(true);
+                }
+            }
         }
     }
     

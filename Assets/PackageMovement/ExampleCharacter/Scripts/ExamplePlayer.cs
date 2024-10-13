@@ -8,6 +8,7 @@ namespace KinematicCharacterController.Examples
 {
     public class ExamplePlayer : MonoBehaviour
     {
+        public static ExamplePlayer Instance;
         public ExampleCharacterController Character;
         public ExampleCharacterCamera CharacterCamera;
 
@@ -16,7 +17,12 @@ namespace KinematicCharacterController.Examples
         private const string MouseScrollInput = "Mouse ScrollWheel";
         private const string HorizontalInput = "Horizontal";
         private const string VerticalInput = "Vertical";
+        public bool IsSelectMouse = true;
 
+        private void Awake()
+        {
+            Instance = this;
+        }
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -31,7 +37,7 @@ namespace KinematicCharacterController.Examples
 
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && IsSelectMouse)
             {
                 Cursor.lockState = CursorLockMode.Locked;
             }

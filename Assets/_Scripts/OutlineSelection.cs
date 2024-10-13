@@ -78,8 +78,6 @@ public class OutlineSelection : MonoBehaviour
                 {
                     rotationActive.HanderAction();
                 }
-                
-                
             }
             else if(highlight.CompareTag("Item"))
             {

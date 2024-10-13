@@ -17903,6 +17903,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1668135438326560408, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3081321410004314634, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -69418,7 +69422,7 @@ MonoBehaviour:
   timeDelayThongBaoLoi: 3
   canActive: 1
   listItemNeed: []
-  soundAction: {fileID: 0}
+  soundAction: {fileID: 8300000, guid: 392162322bf822a428d542d5c0dfd43f, type: 3}
 --- !u!1 &2055819836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1698917995293774, guid: 67cc81d5424ea4fccbc7267473502366, type: 3}
