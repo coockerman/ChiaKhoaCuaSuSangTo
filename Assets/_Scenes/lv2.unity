@@ -6108,7 +6108,7 @@ MonoBehaviour:
   isMoveOrRotateIn: 1
   isLoop: 1
   isActive: 0
-  loaiDo: 2
+  loaiDo: 3
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
@@ -8821,7 +8821,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fac6997ebfb39364db1173ae4a1c49e6, type: 2}
     - target: {fileID: 6756919646411628673, guid: 579fa6f3f1bc72e49b3ff3c0b83f513d, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8879674552334276829, guid: 579fa6f3f1bc72e49b3ff3c0b83f513d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8857,7 +8857,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6756919646411628673, guid: 579fa6f3f1bc72e49b3ff3c0b83f513d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 388322492}
+      addedObject: {fileID: 388322494}
     - targetCorrespondingSourceObject: {fileID: 6756919646411628673, guid: 579fa6f3f1bc72e49b3ff3c0b83f513d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 388322487}
@@ -10086,6 +10086,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 401408ef471c4154aa1be68ab0ad30f6, type: 2}
   loaiItem: 1
   timeDelayAddHoiThoai: 2
+  objectNhapKhoa: {fileID: 0}
 --- !u!1001 &235650395
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14528,7 +14529,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388322482}
   m_Mesh: {fileID: 3928126283504348700, guid: d2974a25e2cf4e540a5a86ff784d0d0f, type: 3}
---- !u!114 &388322492
+--- !u!114 &388322494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14537,14 +14538,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 388322482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08a2c0d452c6ae43b8411fb5977f4fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ca8b33dd087e6e4b97f89beb3d4beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyManChoi: 0
-  itemData: {fileID: 0}
-  datas: []
-  loaiItem: 0
-  timeDelayAddHoiThoai: 2
+  isMoveOrRotateIn: 1
+  isLoop: 0
+  isActive: 0
+  loaiDo: 3
+  dialogThongBaoLoi: {fileID: 0}
+  timeDelayThongBaoLoi: 3
+  canActive: 1
+  listItemNeed: []
+  soundAction: {fileID: 0}
 --- !u!1001 &388680196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22634,7 +22639,7 @@ MonoBehaviour:
   isMoveOrRotateIn: 1
   isLoop: 1
   isActive: 0
-  loaiDo: 2
+  loaiDo: 3
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
@@ -25612,7 +25617,7 @@ MonoBehaviour:
   isMoveOrRotateIn: 1
   isLoop: 1
   isActive: 0
-  loaiDo: 2
+  loaiDo: 3
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
@@ -25883,8 +25888,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658391580}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.3, y: 69.88, z: 56.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.638416, y: 73.09417, z: 67.66053}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -25898,7 +25903,7 @@ Transform:
   - {fileID: 155841455}
   - {fileID: 512435604}
   - {fileID: 1254080250}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 899712669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &659647912
 PrefabInstance:
@@ -28769,6 +28774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 689853386}
   CharacterCamera: {fileID: 1557573716}
+  IsSelectMouse: 1
 --- !u!1001 &694749856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31442,6 +31448,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 16ff675a819e5d74cb109a6f4dc499fb, type: 2}
   loaiItem: 1
   timeDelayAddHoiThoai: 2
+  objectNhapKhoa: {fileID: 0}
 --- !u!1001 &723714640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33940,6 +33947,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 64f70a776305bfb4880f1f7338f57066, type: 2}
   loaiItem: 0
   timeDelayAddHoiThoai: 2
+  objectNhapKhoa: {fileID: 0}
 --- !u!64 &766055336
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39260,6 +39268,42 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0711834, y: 1.8094751, z: 0.6366343}
   m_Center: {x: 0.035579905, y: -0.0015657542, z: -0.3167679}
+--- !u!1 &899712668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899712669}
+  m_Layer: 0
+  m_Name: KhungCanh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &899712669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899712668}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.661583, y: -3.2141693, z: -11.460532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 658391581}
+  - {fileID: 1846602078}
+  - {fileID: 949539195}
+  - {fileID: 1764224444}
+  - {fileID: 1607851699}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &903586273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40274,8 +40318,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949539194}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -48.661583, y: 3.2141693, z: 11.460532}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -40360,7 +40404,7 @@ Transform:
   - {fileID: 1461336937}
   - {fileID: 1010107246}
   - {fileID: 836309448}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 899712669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &949699794
 PrefabInstance:
@@ -41876,6 +41920,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c87b0a96e9fadd64687396b82d6811e4, type: 2}
   loaiItem: 1
   timeDelayAddHoiThoai: 4
+  objectNhapKhoa: {fileID: 0}
 --- !u!1001 &969355410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46242,6 +46287,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce84122e97bbf92469c00510bf76287c, type: 2}
   loaiItem: 1
   timeDelayAddHoiThoai: 5
+  objectNhapKhoa: {fileID: 0}
 --- !u!65 &1089916569
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62813,7 +62859,7 @@ MonoBehaviour:
   isMoveOrRotateIn: 1
   isLoop: 1
   isActive: 0
-  loaiDo: 2
+  loaiDo: 3
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
@@ -64693,8 +64739,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607851698}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -48.661583, y: 3.2141693, z: 11.460532}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -64791,7 +64837,7 @@ Transform:
   - {fileID: 275523551}
   - {fileID: 382973124}
   - {fileID: 435016478}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 899712669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1608595846
 PrefabInstance:
@@ -69198,6 +69244,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 433337cbe1528a647824e3bc781c7eb5, type: 2}
   loaiItem: 1
   timeDelayAddHoiThoai: 3
+  objectNhapKhoa: {fileID: 0}
 --- !u!1001 &1717025318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71247,8 +71294,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764224443}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.5, y: 0, z: -4.75}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.161583, y: 3.2141693, z: 6.710532}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -71842,7 +71889,7 @@ Transform:
   - {fileID: 1269542009}
   - {fileID: 2094304622}
   - {fileID: 1823003958}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 899712669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1767280495
 PrefabInstance:
@@ -72734,6 +72781,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 39c4bb9233045ce4eac6f4c651edc674, type: 2}
   loaiItem: 1
   timeDelayAddHoiThoai: 2
+  objectNhapKhoa: {fileID: 0}
 --- !u!1001 &1775553290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74355,6 +74403,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c6f88333f31a6b42a7a55680da2469a, type: 2}
   loaiItem: 1
   timeDelayAddHoiThoai: 1
+  objectNhapKhoa: {fileID: 0}
 --- !u!1001 &1832046993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74845,8 +74894,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846602077}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -48.661583, y: 3.2141693, z: 11.460532}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -74869,7 +74918,7 @@ Transform:
   - {fileID: 1696618903}
   - {fileID: 712885994}
   - {fileID: 1574169449}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 899712669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1848023474
 PrefabInstance:
@@ -78194,7 +78243,7 @@ MonoBehaviour:
   isMoveOrRotateIn: 1
   isLoop: 1
   isActive: 0
-  loaiDo: 2
+  loaiDo: 3
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
@@ -79028,7 +79077,7 @@ MonoBehaviour:
   isMoveOrRotateIn: 1
   isLoop: 1
   isActive: 0
-  loaiDo: 2
+  loaiDo: 3
   dialogThongBaoLoi: {fileID: 0}
   timeDelayThongBaoLoi: 3
   canActive: 1
@@ -79252,6 +79301,22 @@ PrefabInstance:
     - target: {fileID: 3081321410004314634, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959879647055117648, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959879647055117648, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
+      propertyPath: m_Color.b
+      value: 0.012578547
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959879647055117648, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
+      propertyPath: m_Color.g
+      value: 0.012578547
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959879647055117648, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
+      propertyPath: m_Color.r
+      value: 0.012578547
       objectReference: {fileID: 0}
     - target: {fileID: 7897223327285945679, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
       propertyPath: m_Name
@@ -84212,13 +84277,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 705507995}
-  - {fileID: 658391581}
-  - {fileID: 1846602078}
-  - {fileID: 949539195}
-  - {fileID: 1764224444}
-  - {fileID: 1607851699}
-  - {fileID: 693181095}
+  - {fileID: 899712669}
   - {fileID: 337442963}
+  - {fileID: 693181095}
   - {fileID: 1429526173}
   - {fileID: 1431385189}
   - {fileID: 2004125281}

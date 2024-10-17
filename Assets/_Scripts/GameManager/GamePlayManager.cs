@@ -23,7 +23,7 @@ public class GamePlayManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("This is the last scene, can't load next.");
+            SceneManager.LoadScene(0);
         }
     }
 

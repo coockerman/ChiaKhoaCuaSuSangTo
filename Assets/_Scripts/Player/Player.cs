@@ -21,11 +21,13 @@ public class Player : MonoBehaviour
     {
         if(UIPlayer.instance.huongDan.activeSelf == true)
         {
-            StartCoroutine(addFirstDialog(5));
+            UIPlayer.instance.StartManChoi();
+            StartCoroutine(addFirstDialog(6));
         }
         else
         {
-            StartCoroutine(addFirstDialog(0.5f));
+            UIPlayer.instance.StartManChoi();
+            StartCoroutine(addFirstDialog(2.5f));
         }
     }
     IEnumerator addFirstDialog(float timeWait)
@@ -52,7 +54,7 @@ public class Player : MonoBehaviour
         {
             if (CheckHaveHoiThoai())
             {
-                GamePlayManager.Instance.ChuyenMan();
+                UIPlayer.instance.StartChuyenMan();
             }
         }
     }
