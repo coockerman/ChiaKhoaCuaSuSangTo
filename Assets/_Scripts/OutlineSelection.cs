@@ -9,7 +9,7 @@ public class OutlineSelection : MonoBehaviour
 {
     private float khoangCachHover;
     [SerializeField] float defaultKhoangCach = 5f;
-    [SerializeField] ExampleCharacterCamera characterCamera;
+    [SerializeField] Camera characterCamera;
     private Transform highlight;
     private Transform selection;
     private RaycastHit raycastHit;
@@ -23,10 +23,12 @@ public class OutlineSelection : MonoBehaviour
         {
             Debug.LogError("No camera found in the scene.");
         }
+
+        khoangCachHover = defaultKhoangCach;
     }
     void Update()
     {
-        khoangCachHover = characterCamera.TargetDistance + defaultKhoangCach;
+        //khoangCachHover = characterCamera.TargetDistance + defaultKhoangCach;
         // Highlight
         if (highlight != null)
         {

@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] float letterDelay = 0.1f;
     bool isRunDialog = false;
     bool isStartCheckChuyenMan = false;
+    
     private void Awake()
     {
         Instance = this;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
             StartCoroutine(addFirstDialog(2.5f));
         }
     }
+    
     IEnumerator addFirstDialog(float timeWait)
     {
         yield return new WaitForSeconds(timeWait);
@@ -56,6 +58,11 @@ public class Player : MonoBehaviour
             {
                 UIPlayer.instance.StartChuyenMan();
             }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

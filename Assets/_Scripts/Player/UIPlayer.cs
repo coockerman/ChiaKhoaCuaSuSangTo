@@ -34,12 +34,11 @@ public class UIPlayer : MonoBehaviour
 
     IEnumerator BatDauManChoi()
     {
-        // Đặt alpha ban đầu là 1 (màn hình tối)
         Color color = imgChuyenMan.color;
-        color.a = 1f; // Màn hình tối
+        color.a = 1f;
         imgChuyenMan.color = color;
         yield return new WaitForSeconds(0.5f);
-        // Giảm alpha từ 1 xuống 0 trong 2 giây
+        
         for (float t = 0; t <= 2f; t += 0.1f)
         {
             color.a = Mathf.Lerp(1f, 0f, t / 2f);
@@ -52,12 +51,10 @@ public class UIPlayer : MonoBehaviour
 
     IEnumerator ChuyenMan()
     {
-        // Đặt alpha ban đầu là 0 (màn hình sáng)
         Color color = imgChuyenMan.color;
-        color.a = 0f; // Màn hình sáng
+        color.a = 0f;
         imgChuyenMan.color = color;
-
-        // Tăng alpha từ 0 lên 1 trong 2 giây
+        
         for (float t = 0; t <= 2f; t += 0.1f)
         {
             color.a = Mathf.Lerp(0f, 1f, t / 2f);
@@ -68,7 +65,7 @@ public class UIPlayer : MonoBehaviour
         color.a = 1f;
         imgChuyenMan.color = color;
         yield return new WaitForSeconds(0.5f);
-        // Gọi chuyển màn sau khi hiệu ứng hoàn tất
+        
         GamePlayManager.Instance.ChuyenMan();
     }
 }

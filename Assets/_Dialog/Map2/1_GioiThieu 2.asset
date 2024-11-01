@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9432feaea1a277046b1887363891b4ea, type: 3}
   m_Name: 1_GioiThieu 2
   m_EditorClassIdentifier: 
-  noiDungHoiThoai: "C\u0103n nh\xE0 c\xF4 \u1EDF c\xF3 m\u1ED9t t\u1EA7ng v\xE0 v\xE0i
-    c\u0103n ph\xF2ng"
+  noiDungHoiThoai: "C\u0103n nh\xE0 c\xF4 \u1EDF c\xF3 m\u1ED9t t\u1EA7ng v\xE0 m\u1ED9t
+    v\xE0i c\u0103n ph\xF2ng"
