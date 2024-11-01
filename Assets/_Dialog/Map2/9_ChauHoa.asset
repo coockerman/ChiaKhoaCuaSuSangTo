@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9432feaea1a277046b1887363891b4ea, type: 3}
   m_Name: 9_ChauHoa
   m_EditorClassIdentifier: 
-  noiDungHoiThoai: "Kh\xF4ng ng\u1EDD d\u01B0\u1EDBi n\xE0y l\u01B0u l\u1EA1i m\u1ED9t
-    chi\u1EBFc ch\xECa kho\xE1 c\xF3 g\u1EAFn th\u1EBB nh\u1EDB c\u1EE7a Emily"
+  noiDungHoiThoai: "D\u01B0\u1EDBi n\xE0y l\u01B0u l\u1EA1i m\u1ED9t chi\u1EBFc ch\xECa
+    kho\xE1 c\xF3 g\u1EAFn th\u1EBB nh\u1EDB c\u1EE7a Emily"
