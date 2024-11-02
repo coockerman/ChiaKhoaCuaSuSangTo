@@ -254,7 +254,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7973738740017744322}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998261424647072456}
+        m_TargetAssemblyTypeName: UIPlayer, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &994884020614165113
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,7 +701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7885036965549379745
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1534,7 +1546,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4925031278899011693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998261424647072456}
+        m_TargetAssemblyTypeName: UIPlayer, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4915657250512028781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,7 +1577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2988165608512906298
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1655,7 +1679,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5430561988401812670}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998261424647072456}
+        m_TargetAssemblyTypeName: UIPlayer, Assembly-CSharp
+        m_MethodName: OnSettingGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5234794281849422608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,7 +1784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7511180954484940905
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2098,7 +2134,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1428308103942116618}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998261424647072456}
+        m_TargetAssemblyTypeName: UIPlayer, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6283004698192729068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,7 +2381,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8968564920400845736}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998261424647072456}
+        m_TargetAssemblyTypeName: UIPlayer, Assembly-CSharp
+        m_MethodName: ContinueGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7092558909543579074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,9 +2845,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2701952984240733840}
-  - {fileID: 1540882710155731316}
-  - {fileID: 7885036965549379745}
   - {fileID: 2889276962247520422}
+  - {fileID: 7885036965549379745}
+  - {fileID: 1540882710155731316}
   - {fileID: 7511180954484940905}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2810,6 +2870,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boxDialogText: {fileID: 1668135438326560408}
   dialogText: {fileID: 5453610285443743086}
+  btnVolume: {fileID: 4237121011007657659}
+  UiSetting: {fileID: 6302787205780222427}
   huongDan: {fileID: 994884020614165113}
   imgChuyenMan: {fileID: 3959879647055117648}
 --- !u!223 &211142844301690785

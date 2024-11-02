@@ -24,4 +24,24 @@ public class AudioController : MonoBehaviour
     {
         SoundDoVat.PlayOneShot(audioHuongDan);
     }
+
+    public string ChangeVolumeAudio()
+    {
+        if (SoundDoVat.mute)
+        {
+            Music.mute = false;
+            SoundDoVat.mute = false;
+            SoundPlayer.mute = false;
+            return "Tắt âm";
+        } 
+        else if(!SoundDoVat.mute)
+        {
+            Music.mute = true;
+            SoundDoVat.mute = true;
+            SoundPlayer.mute = true;
+            return "Bật âm";
+        }
+
+        return "";
+    }
 }

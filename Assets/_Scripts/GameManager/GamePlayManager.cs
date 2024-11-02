@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using KinematicCharacterController.Examples;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +13,21 @@ public class GamePlayManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            ExamplePlayer.Instance.IsSelectMouse = false;
+            UIPlayer.instance.OnSettingGame();
+        }
+    }
+
+    public void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        ExamplePlayer.Instance.IsSelectMouse = true;
+    }
     public void ChuyenMan()
     {
         int sceneNow = SceneManager.GetActiveScene().buildIndex;
@@ -27,4 +44,13 @@ public class GamePlayManager : MonoBehaviour
         }
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
