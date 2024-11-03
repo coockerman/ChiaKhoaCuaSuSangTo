@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,6 +10,7 @@ public class UIPlayer : MonoBehaviour
 {
     public static UIPlayer instance;
     [SerializeField] GameObject boxDialogText;
+    [SerializeField] private Slider UiFlashLight;
 
     public GameObject BoxDialogText
     {
@@ -20,18 +22,22 @@ public class UIPlayer : MonoBehaviour
     public TextMeshProUGUI btnVolume;
     public GameObject UiSetting;
 
-    public TextMeshProUGUI DialogText
-    {
-        get { return dialogText; }
-    }
+    public TextMeshProUGUI DialogText { get { return dialogText; }}
 
     public GameObject huongDan;
     public Image imgChuyenMan;
     bool isChuyenMan = false;
+
     delegate void ChuyenManDelegate();
+
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        GamePlayManager.OnUIFlashLight += UpdateUIFlashLight;
     }
 
     public void StartManChoi()
@@ -39,6 +45,10 @@ public class UIPlayer : MonoBehaviour
         StartCoroutine(BatDauManChoi());
     }
 
+    void UpdateUIFlashLight(float countEnergy, float maxEnergy)
+    {
+        UiFlashLight.value = countEnergy / maxEnergy;
+    }
     public void StartChuyenMan()
     {
         if (!isChuyenMan)
@@ -88,6 +98,7 @@ public class UIPlayer : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         GamePlayManager.Instance.ChuyenMan();
     }
+
     IEnumerator TatManHinh(ChuyenManDelegate chuyenManDelegate)
     {
         imgChuyenMan.gameObject.SetActive(true);
@@ -106,6 +117,7 @@ public class UIPlayer : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         chuyenManDelegate?.Invoke();
     }
+
     public void OnSettingGame()
     {
         if (UiSetting.activeSelf == false)
@@ -113,6 +125,7 @@ public class UIPlayer : MonoBehaviour
             UiSetting.SetActive(true);
         }
     }
+
     public void ChangeVolume()
     {
         btnVolume.text = AudioController.instance.ChangeVolumeAudio();

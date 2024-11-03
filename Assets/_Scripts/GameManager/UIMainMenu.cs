@@ -9,7 +9,7 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private GameObject objBackGround;
     [SerializeField] private float moveSpeed = 1f; // Tốc độ di chuyển
     [SerializeField] private float moveDistance = 2f; // Khoảng cách di chuyển từ điểm ban đầu
-
+    [SerializeField] private GameObject objHuongDan;
     private Vector3 startPos;
 
     private void Start()
@@ -41,5 +41,19 @@ public class UIMainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void OnObjectHuongDan()
+    {
+        objHuongDan.SetActive(true);
+    }
+    public void OffObjectHuongDan()
+    {
+        objHuongDan.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

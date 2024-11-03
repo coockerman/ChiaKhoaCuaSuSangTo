@@ -6,14 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="ee1c1e91-7515-428b-ba11-ccfe4aaa4a0f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ChiaKhoaCuaSuSangTo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChiaKhoaCuaSuSangTo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PackageMovement/ExampleCharacter/Scripts/ExamplePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PackageMovement/ExampleCharacter/Scripts/ExamplePlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PackageNoiThat/House Props Softpack/Materials/(Txt)GradientGreen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PackageNoiThat/House Props Softpack/Materials/(Txt)GradientGreen.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PackageNoiThat/House Props Softpack/Materials/(Txt)GradientOrange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PackageNoiThat/House Props Softpack/Materials/(Txt)GradientOrange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PackageNoiThat/House Props Softpack/Prefabs/(Prb)BedsideLight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PackageNoiThat/House Props Softpack/Prefabs/(Prb)BedsideLight.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PackageNoiThat/House Props Softpack/Prefabs/(Prb)MirrorLight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PackageNoiThat/House Props Softpack/Prefabs/(Prb)MirrorLight.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Canvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Audio/AudioController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GameManager/GamePlayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GameManager/GamePlayManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GameManager/UIMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GameManager/UIMainMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/UIPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/UIPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +105,7 @@
       <workItem from="1730378979373" duration="121000" />
       <workItem from="1730466818668" duration="3956000" />
       <workItem from="1730556510452" duration="6859000" />
+      <workItem from="1730621739597" duration="4899000" />
     </task>
     <servers />
   </component>

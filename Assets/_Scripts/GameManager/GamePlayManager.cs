@@ -8,9 +8,21 @@ using UnityEngine.SceneManagement;
 public class GamePlayManager : MonoBehaviour
 {
     public static GamePlayManager Instance;
+    public static event Action<float, float> OnUIFlashLight;
+    
+    [SerializeField] private GameObject flashLight;
+    [SerializeField] private float maxEnergyFlashLight = 20f;
+    private float countEnergyFlashLight = 0f;
+    private bool flashLightOn = false;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        countEnergyFlashLight = maxEnergyFlashLight;
     }
 
     private void Update()
@@ -21,6 +33,47 @@ public class GamePlayManager : MonoBehaviour
             ExamplePlayer.Instance.IsSelectMouse = false;
             UIPlayer.instance.OnSettingGame();
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (countEnergyFlashLight > 1f && flashLightOn == false)
+            {
+                flashLightOn = true;
+                if(!flashLight.activeSelf) flashLight.SetActive(true);
+            }
+            else
+            {
+                flashLightOn = false;
+                if(flashLight.activeSelf) flashLight.SetActive(false);
+            }
+        }
+
+        if (flashLightOn)
+        {
+            countEnergyFlashLight -= Time.deltaTime;
+
+            if (countEnergyFlashLight < 1f)
+            {
+                flashLightOn = false;
+                if(flashLight.activeSelf) flashLight.SetActive(false);
+            }
+            
+            UpdateUIFlashLight();
+        }
+        else
+        {
+            countEnergyFlashLight += (1.5f * Time.deltaTime);
+            
+            if (countEnergyFlashLight > maxEnergyFlashLight)
+                countEnergyFlashLight = maxEnergyFlashLight;
+
+            UpdateUIFlashLight();
+        }
+    }
+
+    void UpdateUIFlashLight()
+    {
+        OnUIFlashLight?.Invoke(countEnergyFlashLight, maxEnergyFlashLight);
     }
 
     public void LockCursor()
@@ -28,6 +81,7 @@ public class GamePlayManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         ExamplePlayer.Instance.IsSelectMouse = true;
     }
+
     public void ChuyenMan()
     {
         int sceneNow = SceneManager.GetActiveScene().buildIndex;
