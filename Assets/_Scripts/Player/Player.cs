@@ -19,22 +19,12 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        if(UIPlayer.instance.huongDan.activeSelf == true)
-        {
-            UIPlayer.instance.StartManChoi();
-            StartCoroutine(addFirstDialog(6));
-        }
-        else
-        {
-            UIPlayer.instance.StartManChoi();
-            StartCoroutine(addFirstDialog(2.5f));
-        }
+        UIPlayer.instance.StartManChoi();
+        StartCoroutine(addFirstDialog(2.5f));
     }
     IEnumerator addFirstDialog(float timeWait)
     {
         yield return new WaitForSeconds(timeWait);
-        UIPlayer.instance.huongDan.SetActive(false);
-        yield return new WaitForSeconds(0.5f);
         AddDialogFirst();
     }
     void AddDialogFirst()

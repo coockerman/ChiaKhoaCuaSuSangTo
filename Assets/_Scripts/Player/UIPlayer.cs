@@ -10,20 +10,15 @@ public class UIPlayer : MonoBehaviour
 {
     public static UIPlayer instance;
     [SerializeField] GameObject boxDialogText;
-    [SerializeField] private Slider UiFlashLight;
-
-    public GameObject BoxDialogText
-    {
-        get { return boxDialogText; }
-    }
+    public GameObject BoxDialogText {get { return boxDialogText; }}
 
     [SerializeField] TextMeshProUGUI dialogText;
+    public TextMeshProUGUI DialogText { get { return dialogText; }}
+
+    [SerializeField] private Slider UiFlashLight;
 
     public TextMeshProUGUI btnVolume;
     public GameObject UiSetting;
-
-    public TextMeshProUGUI DialogText { get { return dialogText; }}
-
     public GameObject huongDan;
     public Image imgChuyenMan;
     bool isChuyenMan = false;
@@ -144,6 +139,15 @@ public class UIPlayer : MonoBehaviour
         StartCoroutine(TatManHinh(mainMenu));
     }
 
+    public void OnHuongDan()
+    {
+        huongDan.SetActive(true);
+    }
+
+    public void OffHuongDan()
+    {
+        huongDan.SetActive(false);
+    }
     public void ContinueGame()
     {
         UiSetting.SetActive(false);

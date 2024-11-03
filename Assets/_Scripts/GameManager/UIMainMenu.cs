@@ -6,36 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class UIMainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject objBackGround;
-    [SerializeField] private float moveSpeed = 1f; // Tốc độ di chuyển
-    [SerializeField] private float moveDistance = 2f; // Khoảng cách di chuyển từ điểm ban đầu
     [SerializeField] private GameObject objHuongDan;
+    [SerializeField] private GameObject objAbout;
+
+    [SerializeField] private GameObject objPlayer;
+    [SerializeField] private float speedRotate = 3f;
     private Vector3 startPos;
+    private Transform transformPlayer;
 
     private void Start()
     {
-        startPos = objBackGround.transform.position; // Lưu lại vị trí ban đầu của nền
-        StartCoroutine(MoveAutoRightLeft());
+        transformPlayer = objPlayer.transform;
     }
 
-    IEnumerator MoveAutoRightLeft()
+    private void Update()
     {
-        while (true)
-        {
-            // Di chuyển sang phải
-            yield return MoveBackground(startPos + Vector3.right * moveDistance);
-            // Di chuyển sang trái
-            yield return MoveBackground(startPos - Vector3.right * moveDistance);
-        }
-    }
-
-    IEnumerator MoveBackground(Vector3 targetPos)
-    {
-        while (Vector3.Distance(objBackGround.transform.position, targetPos) > 0.01f)
-        {
-            objBackGround.transform.position = Vector3.MoveTowards(objBackGround.transform.position, targetPos, moveSpeed * Time.deltaTime);
-            yield return null; // Đợi cho đến frame tiếp theo
-        }
+        transformPlayer.Rotate(0,speedRotate,0);
     }
 
     public void StartGame()
@@ -50,6 +36,14 @@ public class UIMainMenu : MonoBehaviour
     public void OffObjectHuongDan()
     {
         objHuongDan.SetActive(false);
+    }
+    public void OnObjectAbout()
+    {
+        objAbout.SetActive(true);
+    }
+    public void OffObjectAbout()
+    {
+        objAbout.SetActive(false);
     }
 
     public void QuitGame()
