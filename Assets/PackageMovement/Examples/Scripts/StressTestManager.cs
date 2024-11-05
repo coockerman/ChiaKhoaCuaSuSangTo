@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -63,6 +64,7 @@ namespace KinematicCharacterController.Examples
             UpdateOnImages();
         }
 
+        [Obsolete("Obsolete")]
         public void TogglePhysicsSim()
         {
             Physics.autoSimulation = !Physics.autoSimulation;
