@@ -12,6 +12,8 @@ public class GamePlayManager : MonoBehaviour
     
     [SerializeField] private GameObject flashLight;
     [SerializeField] private float maxEnergyFlashLight = 20f;
+    [SerializeField] ManagerData managerData;
+    
     private float countEnergyFlashLight = 0f;
     private bool flashLightOn = false;
 
@@ -88,8 +90,10 @@ public class GamePlayManager : MonoBehaviour
         int totalScenes = SceneManager.sceneCountInBuildSettings;
 
         // Kiểm tra nếu scene hiện tại là scene cuối cùng
-        if (sceneNow <= totalScenes - 1)
+        if (sceneNow < totalScenes - 1)
         {
+            if(managerData.ManChoiFinish < sceneNow + 1)
+                managerData.ManChoiFinish = sceneNow + 1;
             SceneManager.LoadScene(sceneNow + 1);
         }
         else
@@ -106,5 +110,11 @@ public class GamePlayManager : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void ReCusor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        ExamplePlayer.Instance.IsSelectMouse = false;
     }
 }

@@ -10,6 +10,7 @@ public class Item : MonoBehaviour
     {
         doVat, huongDan, moKhoa
     }
+    
     [SerializeField] bool keyManChoi = false;
     [SerializeField] ItemData itemData;
     [SerializeField] List<DialogData> datas = new List<DialogData>();
@@ -57,8 +58,7 @@ public class Item : MonoBehaviour
 
                 if (objectNhapKhoa != null)
                 {
-                    Cursor.lockState = CursorLockMode.None;
-                    ExamplePlayer.Instance.IsSelectMouse = false;
+                    GamePlayManager.Instance.ReCusor();
                     objectNhapKhoa.SetActive(true);
                 }
             }

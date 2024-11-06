@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9432feaea1a277046b1887363891b4ea, type: 3}
+  m_Name: NVCMap2
+  m_EditorClassIdentifier: 
+  noiDungHoiThoai: "Manh m\u1ED1i cho s\u1EF1 m\u1EA5t t\xEDch b\xED \u1EA9n c\u1EE7a
+    Emily c\xF3 th\u1EC3 n\u1EB1m trong nh\u1EEFng b\u1EE9c tranh, h\xE3y t\xECm
+    \u0111\xE1p \xE1n cu\u1ED1i c\xF9ng"

@@ -9,20 +9,35 @@ using UnityEngine.UI;
 public class UIPlayer : MonoBehaviour
 {
     public static UIPlayer instance;
+    //UI dialog
     [SerializeField] GameObject boxDialogText;
     public GameObject BoxDialogText {get { return boxDialogText; }}
 
     [SerializeField] TextMeshProUGUI dialogText;
     public TextMeshProUGUI DialogText { get { return dialogText; }}
 
+    //UI đèn pin
     [SerializeField] private Slider UiFlashLight;
 
+    //UI Setting
     public TextMeshProUGUI btnVolume;
     public GameObject UiSetting;
     public GameObject huongDan;
+    
+    //UI nhiệm vụ chính
+    public GameObject objNhiemVu;
+    public Transform objNhiemVuTransStart, objNhiemVuTransEnd;
+    public DialogData dialogNhiemVuChinh;
+    public TextMeshProUGUI txtNhiemVuChinh;
+    public float moveSpeed = 2f;
+    private float moveProgress = 0f;
+    
+    //UI Chuyển màn chơi
+    public GameObject objChuyenMan;
+    public DialogData dialogKetQuaManChoi;
+    public TextMeshProUGUI txtKetQuaManChoi;
     public Image imgChuyenMan;
     bool isChuyenMan = false;
-
     delegate void ChuyenManDelegate();
 
     private void Awake()
@@ -33,6 +48,31 @@ public class UIPlayer : MonoBehaviour
     private void Start()
     {
         GamePlayManager.OnUIFlashLight += UpdateUIFlashLight;
+        
+        if (dialogNhiemVuChinh != null)
+            txtNhiemVuChinh.text = dialogNhiemVuChinh.noiDungHoiThoai;
+        
+        if(dialogKetQuaManChoi != null) 
+            txtKetQuaManChoi.text = dialogKetQuaManChoi.noiDungHoiThoai;
+    }
+
+    private void Update()
+    {
+        MoveUIObjNhiemVuChinh();
+    }
+
+    void MoveUIObjNhiemVuChinh()
+    {
+        if (Input.GetKey(KeyCode.R))
+        {
+            moveProgress += moveSpeed * Time.deltaTime;
+        }
+        else
+        {
+            moveProgress -= (moveSpeed * Time.deltaTime * 0.5f);
+        }
+        moveProgress = Mathf.Clamp01(moveProgress);
+        objNhiemVu.transform.position = Vector3.Lerp(objNhiemVuTransStart.position, objNhiemVuTransEnd.position, moveProgress);
     }
 
     public void StartManChoi()
@@ -44,10 +84,12 @@ public class UIPlayer : MonoBehaviour
     {
         UiFlashLight.value = countEnergy / maxEnergy;
     }
+    
     public void StartChuyenMan()
     {
         if (!isChuyenMan)
         {
+            OffUIChuyenMan();
             StartCoroutine(ChuyenMan());
             isChuyenMan = true;
         }
@@ -147,6 +189,15 @@ public class UIPlayer : MonoBehaviour
     public void OffHuongDan()
     {
         huongDan.SetActive(false);
+    }
+
+    public void OnUIChuyenMan()
+    {
+        objChuyenMan.SetActive(true);
+    }
+    void OffUIChuyenMan()
+    {
+        objChuyenMan.SetActive(false);
     }
     public void ContinueGame()
     {

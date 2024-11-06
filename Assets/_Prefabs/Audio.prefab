@@ -305,6 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioDoVat: {fileID: 8300000, guid: 6b853d396f1a2264db1974ee27f6f18d, type: 3}
   audioHuongDan: {fileID: 8300000, guid: 0079ee5836b507f48b9bd86cfead95de, type: 3}
+  audioStepPlayer: {fileID: 8300000, guid: 5ee6d18df93734a468d46295c40b0859, type: 3}
   Music: {fileID: 8646471071900147915}
   SoundPlayer: {fileID: 3552422784606461116}
   SoundDoVat: {fileID: 5631762542832285541}

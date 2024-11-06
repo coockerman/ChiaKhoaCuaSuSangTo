@@ -52574,6 +52574,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1954953169959460870, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1954953169959460870, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998261424647072456, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
+      propertyPath: dialogNhiemVuChinh
+      value: 
+      objectReference: {fileID: 11400000, guid: ff95d4c7225d3f4408a03ad005f99675, type: 2}
+    - target: {fileID: 1998261424647072456, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
+      propertyPath: dialogKetQuaManChoi
+      value: 
+      objectReference: {fileID: 11400000, guid: 23ed6c83dcb30fe44bd1e144d4411930, type: 2}
     - target: {fileID: 3081321410004314634, guid: 5a83866eb40c54c4590e85192aea01cb, type: 3}
       propertyPath: m_Pivot.x
       value: 0

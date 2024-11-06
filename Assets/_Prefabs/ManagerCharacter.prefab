@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashLight: {fileID: 4699450099551643685}
   maxEnergyFlashLight: 25
+  managerData: {fileID: 11400000, guid: 91c09d85b67cdaf438b964d21440abc5, type: 2}
 --- !u!1 &4218321059532263757
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +537,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 40
   orthographic: 0

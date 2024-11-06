@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9432feaea1a277046b1887363891b4ea, type: 3}
+  m_Name: NVCMap4
+  m_EditorClassIdentifier: 
+  noiDungHoiThoai: "T\xECm ra \u0111\u01B0\u1EE3c Emily l\xE0 v\xF4 c\xF9ng c\u1EA7n
+    thi\u1EBFt l\xFAc n\xE0y, h\xE3y t\xECm c\xE1c v\u1EADt d\u1EE5ng c\u1EA7n thi\u1EBFt
+    v\xE0 v\u01B0\u1EE3t qua c\xE1c th\u1EED th\xE1ch"

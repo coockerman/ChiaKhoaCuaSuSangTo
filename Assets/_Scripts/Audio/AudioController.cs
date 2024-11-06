@@ -8,14 +8,16 @@ public class AudioController : MonoBehaviour
 
     public AudioClip audioDoVat;
     public AudioClip audioHuongDan;
-    private void Awake()
-    {
-        instance = this;
-    }
+    public AudioClip audioStepPlayer;
+    
     public AudioSource Music;
     public AudioSource SoundPlayer;
     public AudioSource SoundDoVat;
     
+    private void Awake()
+    {
+        instance = this;
+    }
     public void OnAudioDoVat()
     {
         SoundDoVat.PlayOneShot(audioDoVat);
@@ -24,7 +26,11 @@ public class AudioController : MonoBehaviour
     {
         SoundDoVat.PlayOneShot(audioHuongDan);
     }
-
+    public void OnAudioStepPlayer()
+    {
+        SoundPlayer.PlayOneShot(audioStepPlayer);
+    }
+    
     public string ChangeVolumeAudio()
     {
         if (SoundDoVat.mute)

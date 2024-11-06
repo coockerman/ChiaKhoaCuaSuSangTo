@@ -5,16 +5,194 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee1c1e91-7515-428b-ba11-ccfe4aaa4a0f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/PackageCharacter/Military.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PackageCharacter/Military.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PackageCharacter/StarterAssets/ThirdPersonController/Character/Animations/StarterAssetsThirdPerson.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PackageCharacter/StarterAssets/ThirdPersonController/Character/Animations/StarterAssetsThirdPerson.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ChiaKhoaCuaSuSangTo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChiaKhoaCuaSuSangTo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Font4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Font4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/1_GioiThieu1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/1_GioiThieu1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/1_GioiThieu2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/1_GioiThieu2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/1_GioiThieu3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/1_GioiThieu3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/1_GioiThieu4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/1_GioiThieu4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/2_BucThuTrenBan.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/2_BucThuTrenBan.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/3_CauThangGacMai.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/3_CauThangGacMai.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/3_DongHo.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/3_DongHo.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/4_HTKetSat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/4_HTKetSat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/4_LoiKetSat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/4_LoiKetSat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/5_BucThuTrongGamTu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/5_BucThuTrongGamTu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/6_PhongNguSo9.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/6_PhongNguSo9.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/6_PhongNguThuong.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/6_PhongNguThuong.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/7_ChuyenMan1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/7_ChuyenMan1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/7_ChuyenMan2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map1/7_ChuyenMan2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/1_GioiThieu 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/1_GioiThieu 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/1_GioiThieu 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/1_GioiThieu 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/1_GioiThieu 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/1_GioiThieu 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/1_GioiThieu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/1_GioiThieu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/2_CuaChinh 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/2_CuaChinh 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/2_CuaChinh 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/2_CuaChinh 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/2_CuaChinh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/2_CuaChinh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/3_NganKeoTu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/3_NganKeoTu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/3_Tranh1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/3_Tranh1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/4_Tranh 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/4_Tranh 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/4_Tranh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/4_Tranh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/5_TranhCoGai.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/5_TranhCoGai.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_KhoaPhongNgu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_KhoaPhongNgu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_NhatKy 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_NhatKy 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_NhatKy.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_NhatKy.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_PhongNgu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_PhongNgu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_TranhPhongNgu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/6_TranhPhongNgu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/7_NapRuong 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/7_NapRuong 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/7_NapRuong.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/7_NapRuong.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/8_NhatKi 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/8_NhatKi 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/8_NhatKi.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/8_NhatKi.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/9_ChauHoa 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/9_ChauHoa 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/9_ChauHoa 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/9_ChauHoa 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/9_ChauHoa 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/9_ChauHoa 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/9_ChauHoa.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map2/9_ChauHoa.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/0_GioiThieu 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/0_GioiThieu 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/0_GioiThieu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/0_GioiThieu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/1_CuaChinh 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/1_CuaChinh 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/1_CuaChinh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/1_CuaChinh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/1_LoiCuaChinh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/1_LoiCuaChinh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/2_HopThu 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/2_HopThu 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/2_HopThu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/2_HopThu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/2_Oto.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/2_Oto.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/3_BonTamTang2 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/3_BonTamTang2 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/3_BonTamTang2 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/3_BonTamTang2 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/3_BonTamTang2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/3_BonTamTang2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/4_Sach 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/4_Sach 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/4_Sach 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/4_Sach 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/4_Sach.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/4_Sach.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/5_BucAnh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/5_BucAnh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/6_MuiTen.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/6_MuiTen.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/7_LoiGacMai.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/7_LoiGacMai.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/7_MoGacMai.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/7_MoGacMai.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/8_Tien 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/8_Tien 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/8_Tien.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/8_Tien.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/9_BanDo 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/9_BanDo 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/9_BanDo 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/9_BanDo 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/9_BanDo.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map3/9_BanDo.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/10_ChiPhieu 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/10_ChiPhieu 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/10_ChiPhieu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/10_ChiPhieu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/1_GioiThieu 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/1_GioiThieu 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/1_GioiThieu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/1_GioiThieu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/2_LoiCuaNha.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/2_LoiCuaNha.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/3_ThuocCam 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/3_ThuocCam 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/3_ThuocCam 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/3_ThuocCam 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/3_ThuocCam.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/3_ThuocCam.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/4_PhongHoaChat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/4_PhongHoaChat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/5_CuaPhongkhoa.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/5_CuaPhongkhoa.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/6_LoiKetSat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/6_LoiKetSat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/6_MoKetSat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/6_MoKetSat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/7_LoiRuong.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/7_LoiRuong.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/8_RuongThongBao.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/8_RuongThongBao.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/9_Thu.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Dialog/Map4/9_Thu.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Audio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Audio.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/ManagerCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/ManagerCharacter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/panelHuongDan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/panelHuongDan.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/LV1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/LV1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GameManager/UIMainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GameManager/UIMainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ActiveObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ActiveObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Audio/AudioController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/CheckAddHoiThoai.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/CheckAddHoiThoai.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GameManager/GamePlayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GameManager/GamePlayManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GameManager/UIMainMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GameManager/UIMainMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HoiThoai.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HoiThoai/DialogData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HoiThoai/DialogData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Item/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Item/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Item/ItemData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Item/ItemData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/FootstepHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/FootstepHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/UIPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Player/UIPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/UIPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Player/UIPlayer.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,9 +204,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.11.0/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.oculus@4.2.0/Runtime/OculusLoader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.openxr@1.12.1/Editor/FeatureSupport/FeatureHelpers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/ScriptData/ManagerData.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -112,6 +288,7 @@
       <workItem from="1730556510452" duration="6859000" />
       <workItem from="1730621739597" duration="4899000" />
       <workItem from="1730657456894" duration="2469000" />
+      <workItem from="1730908560627" duration="13633000" />
     </task>
     <servers />
   </component>

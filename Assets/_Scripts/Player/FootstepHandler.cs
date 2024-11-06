@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class FootstepHandler : MonoBehaviour
 {
-    public AudioClip step;
-
     public void OnFootstep()
     {
-        AudioController.instance.SoundPlayer.PlayOneShot(step);
+        AudioController.instance.OnAudioStepPlayer();
     }
     public void OnLand()
     {

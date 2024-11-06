@@ -44,7 +44,8 @@ public class Player : MonoBehaviour
         {
             if (CheckHaveHoiThoai())
             {
-                UIPlayer.instance.StartChuyenMan();
+                GamePlayManager.Instance.ReCusor();
+                UIPlayer.instance.OnUIChuyenMan();
             }
         }
     }
