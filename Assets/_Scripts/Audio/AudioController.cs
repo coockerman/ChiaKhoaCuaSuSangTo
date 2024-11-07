@@ -30,6 +30,11 @@ public class AudioController : MonoBehaviour
     {
         SoundPlayer.PlayOneShot(audioStepPlayer);
     }
+
+    public void OnAudioObject(AudioClip clip)
+    {
+        SoundDoVat.PlayOneShot(clip);
+    }
     
     public string ChangeVolumeAudio()
     {

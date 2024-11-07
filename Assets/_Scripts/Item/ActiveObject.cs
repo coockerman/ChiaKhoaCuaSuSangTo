@@ -76,7 +76,7 @@ public class ActiveObject : MonoBehaviour
 
         if(soundAction!=null)
         {
-            AudioController.instance.SoundDoVat.PlayOneShot(soundAction);
+            AudioController.instance.OnAudioObject(soundAction);
         }
 
         if (loaiDo == loaiDoXoay.cuaRaVao || loaiDo == loaiDoXoay.cuaTu)
