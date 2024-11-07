@@ -42,7 +42,10 @@ namespace KinematicCharacterController.Examples
                 Cursor.lockState = CursorLockMode.Locked;
             }
 
-            HandleCharacterInput();
+            if (IsSelectMouse)
+            {
+                HandleCharacterInput();
+            }
         }
 
         private void LateUpdate()
