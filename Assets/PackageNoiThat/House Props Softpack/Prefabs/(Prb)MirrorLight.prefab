@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1189593020705380879}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.146, y: -0.09, z: -0.038}
+  m_LocalPosition: {x: 0.049, y: -0.125, z: -0.038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50,7 +50,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -81,7 +81,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 7922837803167098383}
   - component: {fileID: 8224003579676209735}
   - component: {fileID: 7063216060226171035}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mirrorLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}

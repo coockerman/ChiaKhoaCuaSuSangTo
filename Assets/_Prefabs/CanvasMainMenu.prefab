@@ -388,7 +388,7 @@ MonoBehaviour:
   objHuongDan: {fileID: 8184269096812159835}
   objAbout: {fileID: 3666897594629022118}
   objPlayer: {fileID: 0}
-  speedRotate: 3
+  speedRotate: 2
   UISelect: {fileID: 3116753191072063838}
   btnUISelect: {fileID: 769204414103785959}
   groupSelct: {fileID: 550612647892099710}
