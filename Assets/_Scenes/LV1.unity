@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.4
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.9496855, g: 0.9347533, b: 0.9347533, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 2039a0ad0a9d05549928b70362f54902, type: 2}
@@ -6040,7 +6040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1189593020705380879, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5586036807930096125, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
       propertyPath: m_Layer
@@ -6049,6 +6049,10 @@ PrefabInstance:
     - target: {fileID: 7470395397071682203, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
       propertyPath: m_Name
       value: (Prb)MirrorLight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7470395397071682203, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7847519757549690913, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
       propertyPath: m_LocalScale.x
@@ -6102,6 +6106,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8224003579676209735, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3441f6441092d3c459a48c3c48ea63c6, type: 2}
+    - target: {fileID: 8224003579676209735, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: -8782204479173881823, guid: efd1f08bfa5d6ec4b968e57fba68ff02, type: 3}
     - target: {fileID: 8246462400913604735, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
       propertyPath: m_Range
       value: 1
@@ -11206,8 +11218,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: (Prb)BedsideLight
       objectReference: {fileID: 0}
+    - target: {fileID: 7975114727940271198, guid: 4f06099175b8866458a6cf669a7c20fb, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: -8782204479173881823, guid: efd1f08bfa5d6ec4b968e57fba68ff02, type: 3}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5527442254457543, guid: 4f06099175b8866458a6cf669a7c20fb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f06099175b8866458a6cf669a7c20fb, type: 3}
@@ -18031,7 +18048,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.74213827, g: 0.7304694, b: 0.7304694, a: 1}
+  m_Color: {r: 0.59748423, g: 0.59748423, b: 0.59748423, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -34945,12 +34962,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8224003579676209735, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: -8782204479173881823, guid: efd1f08bfa5d6ec4b968e57fba68ff02, type: 3}
     - target: {fileID: 8246462400913604735, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
       propertyPath: m_Range
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1189593020705380879, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eb4faf7729d059408358aadfe75945f, type: 3}
@@ -59283,7 +59305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2095825608
 Transform:
   m_ObjectHideFlags: 0
@@ -60463,7 +60485,7 @@ PrefabInstance:
       objectReference: {fileID: 705507994}
     - target: {fileID: 7120176517738566090, guid: 1adbc012526fe1f44bf94ee5c8e144a9, type: 3}
       propertyPath: maxEnergyFlashLight
-      value: 45
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
