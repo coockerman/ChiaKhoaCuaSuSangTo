@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using KinematicCharacterController.Examples;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class GamePlayManager : MonoBehaviour
 {
@@ -13,10 +14,17 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField] private GameObject flashLight;
     [SerializeField] private float maxEnergyFlashLight = 20f;
     [SerializeField] ManagerData managerData;
+    [SerializeField] private Light lightEnvironment;
+    
+    public float thunderMinTime = 6f; // Thời gian min giữa các tiếng sấm
+    public float thunderMaxTime = 15f; // Thời gian max giữa các tiếng sấm
+    public float flashDuration = 0.2f; // Thời gian sáng chớp
+    private bool isFlashing = false;
     
     private float countEnergyFlashLight = 0f;
     private bool flashLightOn = false;
 
+    
     private void Awake()
     {
         Instance = this;
@@ -25,8 +33,13 @@ public class GamePlayManager : MonoBehaviour
     private void Start()
     {
         countEnergyFlashLight = maxEnergyFlashLight;
+        if (lightEnvironment != null)
+        {
+            AudioController.instance.OnAudioWind();
+            StartCoroutine(WeatherCycle());
+        }
     }
-
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -73,6 +86,31 @@ public class GamePlayManager : MonoBehaviour
         }
     }
 
+    private IEnumerator WeatherCycle()
+    {
+        while (true)
+        {
+            float thunderWaitTime = Random.Range(thunderMinTime, thunderMaxTime);
+            yield return new WaitForSeconds(thunderWaitTime);
+            AudioController.instance.OnAudioStorm();
+            StartCoroutine(FlashLightning());
+            
+        }
+    }
+    private IEnumerator FlashLightning()
+    {
+        isFlashing = true;
+        lightEnvironment.enabled = true;
+        yield return new WaitForSeconds(flashDuration);
+        lightEnvironment.enabled = false;
+        yield return new WaitForSeconds(flashDuration); // Chớp sáng lại
+        lightEnvironment.enabled = true;
+        yield return new WaitForSeconds(flashDuration);
+        lightEnvironment.enabled = false;
+        isFlashing = false;
+    }
+    
+    
     void UpdateUIFlashLight()
     {
         OnUIFlashLight?.Invoke(countEnergyFlashLight, maxEnergyFlashLight);

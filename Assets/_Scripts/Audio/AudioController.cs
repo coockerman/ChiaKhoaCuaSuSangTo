@@ -9,11 +9,13 @@ public class AudioController : MonoBehaviour
     public AudioClip audioDoVat;
     public AudioClip audioHuongDan;
     public AudioClip audioStepPlayer;
+    public AudioClip audioStorm;
+    public AudioClip audioWind;
     
     public AudioSource Music;
     public AudioSource SoundPlayer;
     public AudioSource SoundDoVat;
-    
+    public AudioSource SoundEnvironment;
     private void Awake()
     {
         instance = this;
@@ -30,7 +32,20 @@ public class AudioController : MonoBehaviour
     {
         SoundPlayer.PlayOneShot(audioStepPlayer);
     }
-    
+    public void OnAudioObject(AudioClip clip) 
+    {
+        SoundDoVat.PlayOneShot(clip);
+    }
+
+    public void OnAudioStorm()
+    {
+        SoundEnvironment.PlayOneShot(audioStorm);
+    }
+
+    public void OnAudioWind()
+    {
+        SoundEnvironment.PlayOneShot(audioWind);
+    }
     public string ChangeVolumeAudio()
     {
         if (SoundDoVat.mute)
@@ -38,13 +53,15 @@ public class AudioController : MonoBehaviour
             Music.mute = false;
             SoundDoVat.mute = false;
             SoundPlayer.mute = false;
+            SoundEnvironment.mute = false;
             return "Tắt âm";
-        } 
+        }
         else if(!SoundDoVat.mute)
         {
             Music.mute = true;
             SoundDoVat.mute = true;
             SoundPlayer.mute = true;
+            SoundEnvironment.mute = true;
             return "Bật âm";
         }
 

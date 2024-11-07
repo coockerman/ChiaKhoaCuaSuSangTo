@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee1c1e91-7515-428b-ba11-ccfe4aaa4a0f" name="Changes" comment="" />
+    <list default="true" id="ee1c1e91-7515-428b-ba11-ccfe4aaa4a0f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ChiaKhoaCuaSuSangTo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChiaKhoaCuaSuSangTo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PackageNha/Prefabs/Modules/Roads/Streetlight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PackageNha/Prefabs/Modules/Roads/Streetlight.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Font4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Font4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Audio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Audio.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/LV1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/LV1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Audio/AudioController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GameManager/GamePlayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GameManager/GamePlayManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Item/ActiveObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Item/ActiveObject.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +53,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../3.UnityGameProduct/GameChiaKhoaCuaSuSangTo/V2.0\Chìa khoá của sự sáng tỏ.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../3.UnityGameProduct/GameChiaKhoaCuaSuSangTo/PC/V2.3\Chìa khoá của sự sáng tỏ.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\3.UnityGameProduct\GameChiaKhoaCuaSuSangTo\V2.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -99,6 +113,7 @@
       <workItem from="1730621739597" duration="4899000" />
       <workItem from="1730657456894" duration="2469000" />
       <workItem from="1730908560627" duration="14003000" />
+      <workItem from="1731002278594" duration="3806000" />
     </task>
     <servers />
   </component>
