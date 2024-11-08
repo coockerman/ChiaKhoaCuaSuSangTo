@@ -10,21 +10,26 @@ public class GamePlayManager : MonoBehaviour
 {
     public static GamePlayManager Instance;
     public static event Action<float, float> OnUIFlashLight;
+    public static event Action<float> OnUITime;
     
     [SerializeField] private GameObject flashLight;
     [SerializeField] private float maxEnergyFlashLight = 20f;
     [SerializeField] ManagerData managerData;
-    [SerializeField] private Light lightEnvironment;
     
-    public float thunderMinTime = 6f; // Thời gian min giữa các tiếng sấm
-    public float thunderMaxTime = 15f; // Thời gian max giữa các tiếng sấm
-    public float flashDuration = 0.2f; // Thời gian sáng chớp
+    public Light lightEnvironment;
+    public float thunderMinTime = 6f; // Thời gian min
+    public float thunderMaxTime = 15f; // Thời gian max
+    public float flashDuration = 0.2f; // Thời gian sáng của tia chớp
     private bool isFlashing = false;
-    
+
+    public float speedFlashLight = 1f;
     private float countEnergyFlashLight = 0f;
     private bool flashLightOn = false;
 
-    
+    public float secondTimeMax = 300f;
+    public float countSecondTime = 0f;
+    private bool isGamePlay = true;
+    public bool IsGamePlay {get {return isGamePlay;} set {isGamePlay = value;}}
     private void Awake()
     {
         Instance = this;
@@ -33,6 +38,10 @@ public class GamePlayManager : MonoBehaviour
     private void Start()
     {
         countEnergyFlashLight = maxEnergyFlashLight;
+        countSecondTime = secondTimeMax;
+        
+        StartCoroutine(CountDownTime());
+        
         if (lightEnvironment != null)
         {
             AudioController.instance.OnAudioWind();
@@ -51,7 +60,7 @@ public class GamePlayManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (countEnergyFlashLight > 1f && flashLightOn == false)
+            if (countEnergyFlashLight >= 0.3f && flashLightOn == false)
             {
                 flashLightOn = true;
                 if(!flashLight.activeSelf) flashLight.SetActive(true);
@@ -65,9 +74,9 @@ public class GamePlayManager : MonoBehaviour
 
         if (flashLightOn)
         {
-            countEnergyFlashLight -= Time.deltaTime;
+            countEnergyFlashLight -= speedFlashLight * Time.deltaTime;
 
-            if (countEnergyFlashLight < 1f)
+            if (countEnergyFlashLight < 0.3f)
             {
                 flashLightOn = false;
                 if(flashLight.activeSelf) flashLight.SetActive(false);
@@ -75,26 +84,50 @@ public class GamePlayManager : MonoBehaviour
             
             UpdateUIFlashLight();
         }
-        else
+    }
+
+    IEnumerator CountDownTime()
+    {
+        while (isGamePlay)
         {
-            countEnergyFlashLight += (1.5f * Time.deltaTime);
-            
+            yield return new WaitForSeconds(1f);
+            countSecondTime--;
+            if (countSecondTime < 0)
+            {
+                UIPlayer.instance.OnUIThatBai();
+                ReCusor();
+                isGamePlay = false;
+            }
+            else
+            {
+                UpdateUITime();
+            }
+        }
+    }
+    public bool AddEnergyFlashLight(float amount)
+    {
+        if (countEnergyFlashLight < maxEnergyFlashLight)
+        {
+            countEnergyFlashLight += amount / 100 * maxEnergyFlashLight;
+        
             if (countEnergyFlashLight > maxEnergyFlashLight)
                 countEnergyFlashLight = maxEnergyFlashLight;
 
             UpdateUIFlashLight();
+            return true;
         }
-    }
 
+        return false;
+    }
     private IEnumerator WeatherCycle()
     {
         while (true)
         {
             float thunderWaitTime = Random.Range(thunderMinTime, thunderMaxTime);
             yield return new WaitForSeconds(thunderWaitTime);
-            AudioController.instance.OnAudioStorm();
             StartCoroutine(FlashLightning());
-            
+            yield return new WaitForSeconds(0.5f); // Đợi 0.5 giây trước khi có tiếng sấm
+            AudioController.instance.OnAudioStorm();
         }
     }
     private IEnumerator FlashLightning()
@@ -116,6 +149,10 @@ public class GamePlayManager : MonoBehaviour
         OnUIFlashLight?.Invoke(countEnergyFlashLight, maxEnergyFlashLight);
     }
 
+    void UpdateUITime()
+    {
+        OnUITime?.Invoke(countSecondTime);
+    }
     public void LockCursor()
     {
         Cursor.lockState = CursorLockMode.Locked;

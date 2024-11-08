@@ -9,13 +9,20 @@ public class AudioController : MonoBehaviour
     public AudioClip audioDoVat;
     public AudioClip audioHuongDan;
     public AudioClip audioStepPlayer;
-    public AudioClip audioStorm;
+    
     public AudioClip audioWind;
     
     public AudioSource Music;
     public AudioSource SoundPlayer;
     public AudioSource SoundDoVat;
+    
+    public AudioClip audioStorm;
     public AudioSource SoundEnvironment;
+    
+    public void OnAudioStorm()
+    {
+        SoundEnvironment.PlayOneShot(audioStorm);
+    }
     private void Awake()
     {
         instance = this;
@@ -37,10 +44,7 @@ public class AudioController : MonoBehaviour
         SoundDoVat.PlayOneShot(clip);
     }
 
-    public void OnAudioStorm()
-    {
-        SoundEnvironment.PlayOneShot(audioStorm);
-    }
+    
 
     public void OnAudioWind()
     {

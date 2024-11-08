@@ -9,21 +9,33 @@ using UnityEngine.UI;
 public class UIPlayer : MonoBehaviour
 {
     public static UIPlayer instance;
+
     //UI dialog
     [SerializeField] GameObject boxDialogText;
-    public GameObject BoxDialogText {get { return boxDialogText; }}
+
+    public GameObject BoxDialogText
+    {
+        get { return boxDialogText; }
+    }
 
     [SerializeField] TextMeshProUGUI dialogText;
-    public TextMeshProUGUI DialogText { get { return dialogText; }}
+
+    public TextMeshProUGUI DialogText
+    {
+        get { return dialogText; }
+    }
 
     //UI đèn pin
     [SerializeField] private Slider UiFlashLight;
+    [SerializeField] private Image FillFlashLight;
+    [SerializeField] private Color defaultColorFlashLight;
+    [SerializeField] private Color weakColorFlashLight;
 
     //UI Setting
     public TextMeshProUGUI btnVolume;
     public GameObject UiSetting;
     public GameObject huongDan;
-    
+
     //UI nhiệm vụ chính
     public GameObject objNhiemVu;
     public Transform objNhiemVuTransStart, objNhiemVuTransEnd;
@@ -31,13 +43,18 @@ public class UIPlayer : MonoBehaviour
     public TextMeshProUGUI txtNhiemVuChinh;
     public float moveSpeed = 2f;
     private float moveProgress = 0f;
-    
+
+    //UI Time
+    public TextMeshProUGUI txtTime;
+    public GameObject objThatBai;
+
     //UI Chuyển màn chơi
     public GameObject objChuyenMan;
     public DialogData dialogKetQuaManChoi;
     public TextMeshProUGUI txtKetQuaManChoi;
     public Image imgChuyenMan;
     bool isChuyenMan = false;
+
     delegate void ChuyenManDelegate();
 
     private void Awake()
@@ -47,13 +64,19 @@ public class UIPlayer : MonoBehaviour
 
     private void Start()
     {
-        GamePlayManager.OnUIFlashLight += UpdateUIFlashLight;
         
+
         if (dialogNhiemVuChinh != null)
             txtNhiemVuChinh.text = dialogNhiemVuChinh.noiDungHoiThoai;
-        
-        if(dialogKetQuaManChoi != null) 
+
+        if (dialogKetQuaManChoi != null)
             txtKetQuaManChoi.text = dialogKetQuaManChoi.noiDungHoiThoai;
+    }
+
+    private void OnEnable()
+    {
+        GamePlayManager.OnUIFlashLight += UpdateUIFlashLight;
+        GamePlayManager.OnUITime += UpdateUITime;
     }
 
     private void Update()
@@ -71,8 +94,10 @@ public class UIPlayer : MonoBehaviour
         {
             moveProgress -= (moveSpeed * Time.deltaTime * 0.5f);
         }
+
         moveProgress = Mathf.Clamp01(moveProgress);
-        objNhiemVu.transform.position = Vector3.Lerp(objNhiemVuTransStart.position, objNhiemVuTransEnd.position, moveProgress);
+        objNhiemVu.transform.position =
+            Vector3.Lerp(objNhiemVuTransStart.position, objNhiemVuTransEnd.position, moveProgress);
     }
 
     public void StartManChoi()
@@ -82,9 +107,26 @@ public class UIPlayer : MonoBehaviour
 
     void UpdateUIFlashLight(float countEnergy, float maxEnergy)
     {
-        UiFlashLight.value = countEnergy / maxEnergy;
+        float valueEnergy = (countEnergy / maxEnergy);
+
+        if (valueEnergy >= 0.15f)
+            FillFlashLight.color = defaultColorFlashLight;
+        else if (valueEnergy < 0.15f)
+            FillFlashLight.color = weakColorFlashLight;
+
+        UiFlashLight.value = valueEnergy;
     }
-    
+
+    public void UpdateUITime(float totalSeconds)
+    {
+        if (txtTime == null) return;
+        
+        int minutes = Mathf.FloorToInt(totalSeconds / 60);
+        int seconds = Mathf.FloorToInt(totalSeconds % 60);
+
+        txtTime.text = $"{minutes:D2}:{seconds:D2}";
+    }
+
     public void StartChuyenMan()
     {
         if (!isChuyenMan)
@@ -193,12 +235,21 @@ public class UIPlayer : MonoBehaviour
 
     public void OnUIChuyenMan()
     {
+        GamePlayManager.OnUITime -= UpdateUITime;
+        GamePlayManager.Instance.IsGamePlay = false;
         objChuyenMan.SetActive(true);
     }
+
     void OffUIChuyenMan()
     {
         objChuyenMan.SetActive(false);
     }
+
+    public void OnUIThatBai()
+    {
+        objThatBai.SetActive(true);
+    }
+    
     public void ContinueGame()
     {
         UiSetting.SetActive(false);

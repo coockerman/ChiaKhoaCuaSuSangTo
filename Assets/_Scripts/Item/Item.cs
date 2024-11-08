@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
 {
     public enum LoaiItem
     {
-        doVat, huongDan, moKhoa
+        doVat, huongDan, moKhoa, pin
     }
     
     [SerializeField] bool keyManChoi = false;
@@ -46,7 +46,6 @@ public class Item : MonoBehaviour
                 Player.Instance.AddItem(itemData);
                 Destroy(gameObject);
             }
-
             else if (loaiItem == LoaiItem.huongDan)
             {
                 AudioController.instance.OnAudioHuongDan();
@@ -62,6 +61,22 @@ public class Item : MonoBehaviour
                     objectNhapKhoa.SetActive(true);
                 }
             }
+            else if (loaiItem == LoaiItem.pin)
+            {
+                bool checkAddEnergy = GamePlayManager.Instance.AddEnergyFlashLight(50);
+                if (checkAddEnergy) 
+                {
+                    // thêm thành công
+                    AudioController.instance.OnAudioDoVat();
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    //Thêm không thành công và in ra hội thoại lỗi
+                    AddHoiThoaiItem();
+                }
+            }
+                
         }
     }
     
