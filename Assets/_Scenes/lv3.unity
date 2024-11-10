@@ -71479,11 +71479,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7120176517738566090, guid: 1adbc012526fe1f44bf94ee5c8e144a9, type: 3}
       propertyPath: secondTimeMax
-      value: 480
+      value: 900
       objectReference: {fileID: 0}
     - target: {fileID: 7120176517738566090, guid: 1adbc012526fe1f44bf94ee5c8e144a9, type: 3}
       propertyPath: maxEnergyFlashLight
-      value: 35
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
