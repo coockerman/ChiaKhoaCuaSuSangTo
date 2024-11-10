@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ee1c1e91-7515-428b-ba11-ccfe4aaa4a0f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ChiaKhoaCuaSuSangTo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ChiaKhoaCuaSuSangTo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PackageNha/Prefabs/Modules/Roads/Streetlight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PackageNha/Prefabs/Modules/Roads/Streetlight.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Canvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/LV1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/LV1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Audio/AudioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GameManager/GamePlayManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GameManager/GamePlayManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Item/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Item/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/OutlineSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/OutlineSelection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/UIPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/UIPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/lv4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/lv4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,22 +31,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../3.UnityGameProduct/GameChiaKhoaCuaSuSangTo/PC/V3.0\Chìa khoá của sự sáng tỏ.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../3.UnityGameProduct/GameChiaKhoaCuaSuSangTo/PC/V3.2\Chìa khoá của sự sáng tỏ.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="D:\3.UnityGameProduct\GameChiaKhoaCuaSuSangTo\V2.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -115,6 +109,7 @@
       <workItem from="1731002278594" duration="3806000" />
       <workItem from="1731052051645" duration="1268000" />
       <workItem from="1731071437345" duration="17997000" />
+      <workItem from="1731167739711" duration="1443000" />
     </task>
     <servers />
   </component>

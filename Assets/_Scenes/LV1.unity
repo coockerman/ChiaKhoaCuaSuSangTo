@@ -60789,11 +60789,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7120176517738566090, guid: 1adbc012526fe1f44bf94ee5c8e144a9, type: 3}
       propertyPath: secondTimeMax
-      value: 15
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7120176517738566090, guid: 1adbc012526fe1f44bf94ee5c8e144a9, type: 3}
       propertyPath: thunderMaxTime
-      value: 180
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7120176517738566090, guid: 1adbc012526fe1f44bf94ee5c8e144a9, type: 3}
       propertyPath: lightEnvironment
